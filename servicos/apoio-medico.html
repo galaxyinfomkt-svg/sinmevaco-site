@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apoio ao Médico - SINMEVAÇO | Saúde Mental e Bem-Estar</title>
+    <meta name="description" content="Suporte à saúde mental e bem-estar do médico. Psicólogos, grupos de apoio e programas de prevenção ao burnout no SINMEVAÇO.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'verde': { 50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d' }
+                    },
+                    fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+    </style>
+</head>
+<body class="font-sans bg-white">
+
+    <!-- Header -->
+    <header class="bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <a href="../index.html" class="flex items-center gap-3">
+                    <img src="../LOGO SINMEVAÇO.jpeg" alt="SINMEVAÇO" class="h-12 rounded-lg shadow">
+                    <div>
+                        <span class="font-extrabold text-verde-800 text-xl tracking-tight">SIN<span class="text-verde-600">MEVAÇO</span></span>
+                        <p class="text-xs text-gray-500 -mt-1">Sindicato dos Médicos do Vale do Aço</p>
+                    </div>
+                </a>
+                <nav class="hidden lg:flex items-center gap-6">
+                    <a href="../index.html" class="text-gray-600 hover:text-verde-600 font-medium">Início</a>
+                    <a href="../index.html#servicos" class="text-verde-600 font-semibold">Serviços</a>
+                    <a href="../noticias.html" class="text-gray-600 hover:text-verde-600 font-medium">Notícias</a>
+                    <a href="../blog.html" class="text-gray-600 hover:text-verde-600 font-medium">Blog</a>
+                    <a href="../index.html#contato" class="text-gray-600 hover:text-verde-600 font-medium">Contato</a>
+                </nav>
+                <a href="https://wa.me/5531997178316" class="hidden sm:flex items-center gap-2 bg-verde-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-verde-700 transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    Falar Conosco
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="max-w-3xl">
+                <a href="../index.html#servicos" class="inline-flex items-center gap-2 text-verde-200 hover:text-white mb-6 transition-colors">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/></svg>
+                    Voltar para Serviços
+                </a>
+                <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                    Apoio ao Médico<br>
+                    <span class="text-verde-300">Cuidando de Quem Cuida</span>
+                </h1>
+                <p class="text-xl text-verde-100 mb-8">
+                    Suporte especializado à saúde mental e bem-estar do médico. Porque quem cuida também precisa ser cuidado. Atendimento psicológico, grupos de apoio e programas de prevenção ao burnout.
+                </p>
+                <div class="flex flex-wrap gap-4">
+                    <a href="https://wa.me/5531997178316?text=Olá! Preciso de apoio psicológico" class="bg-white text-verde-700 px-8 py-4 rounded-full font-bold hover:bg-verde-50 transition-all flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                        Solicitar Atendimento
+                    </a>
+                    <a href="tel:+5531997178316" class="bg-verde-600 text-white px-8 py-4 rounded-full font-bold hover:bg-verde-500 transition-all border border-verde-400">
+                        (31) 99717-8316
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-gray-50 border-b">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div>
+                    <div class="text-4xl font-bold text-verde-600">200+</div>
+                    <div class="text-gray-600">Médicos atendidos</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-verde-600">95%</div>
+                    <div class="text-gray-600">Satisfação no atendimento</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-verde-600">24/7</div>
+                    <div class="text-gray-600">Linha de apoio emergencial</div>
+                </div>
+                <div>
+                    <div class="text-4xl font-bold text-verde-600">100%</div>
+                    <div class="text-gray-600">Confidencialidade garantida</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Detail -->
+    <section class="py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Programas de Apoio Disponíveis</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Suporte completo para cuidar da sua saúde mental, emocional e física. Porque médico também precisa de cuidado.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 bg-verde-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-verde-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Atendimento Psicológico</h3>
+                    <p class="text-gray-600 mb-4">Sessões individuais com psicólogos especializados em saúde mental do profissional médico.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Sessões semanais</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>100% confidencial</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Online ou presencial</li>
+                    </ul>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Grupos de Apoio</h3>
+                    <p class="text-gray-600 mb-4">Encontros mensais com outros médicos para compartilhar experiências e apoio mútuo.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Encontros mensais</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Facilitação profissional</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Ambiente acolhedor</li>
+                    </ul>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Prevenção ao Burnout</h3>
+                    <p class="text-gray-600 mb-4">Programa específico de identificação e prevenção da síndrome de burnout.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Avaliação de risco</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Estratégias preventivas</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Acompanhamento contínuo</li>
+                    </ul>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Linha de Apoio 24/7</h3>
+                    <p class="text-gray-600 mb-4">Atendimento emergencial disponível 24 horas para crises e situações urgentes.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Plantão 24 horas</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Atendimento imediato</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Profissionais especializados</li>
+                    </ul>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-yellow-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Qualidade de Vida</h3>
+                    <p class="text-gray-600 mb-4">Palestras e workshops sobre equilíbrio vida-trabalho e autocuidado.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Gestão do tempo</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Mindfulness</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Atividades físicas</li>
+                    </ul>
+                </div>
+
+                <!-- Card 6 -->
+                <div class="card-hover bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-7 h-7 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/></svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Orientação Financeira</h3>
+                    <p class="text-gray-600 mb-4">Consultoria para organização financeira e planejamento de carreira.</p>
+                    <ul class="text-sm text-gray-500 space-y-2">
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Planejamento financeiro</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Investimentos</li>
+                        <li class="flex items-center gap-2"><svg class="w-4 h-4 text-verde-500" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>Aposentadoria</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Como Acessar o Apoio</h2>
+                <p class="text-gray-600">Processo simples e confidencial para iniciar seu acompanhamento</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-verde-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="font-bold text-gray-800 mb-2">Entre em Contato</h3>
+                    <p class="text-gray-600 text-sm">Ligue ou envie mensagem pelo WhatsApp de forma confidencial</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-verde-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="font-bold text-gray-800 mb-2">Triagem Inicial</h3>
+                    <p class="text-gray-600 text-sm">Conversa breve para entender suas necessidades</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-verde-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="font-bold text-gray-800 mb-2">Agendamento</h3>
+                    <p class="text-gray-600 text-sm">Marcação de primeira sessão em horário conveniente</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-verde-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="font-bold text-gray-800 mb-2">Acompanhamento</h3>
+                    <p class="text-gray-600 text-sm">Início do processo de cuidado com você</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-verde-700">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Cuide de Você Também</h2>
+            <p class="text-verde-100 text-lg mb-8">
+                Você dedica sua vida a cuidar dos outros. Agora é hora de cuidar de si mesmo. Buscar apoio é sinal de força, não fraqueza. Estamos aqui para você.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://wa.me/5531997178316?text=Olá! Preciso de apoio psicológico" class="bg-white text-verde-700 px-8 py-4 rounded-full font-bold hover:bg-verde-50 transition-all flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    Buscar Apoio Agora
+                </a>
+                <a href="tel:+5531997178316" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-verde-700 transition-all">
+                    (31) 99717-8316
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <img src="../LOGO SINMEVAÇO.jpeg" alt="SINMEVAÇO" class="h-12 rounded-lg mx-auto mb-4">
+            <p class="text-gray-400 mb-4">SINMEVAÇO - Sindicato dos Médicos do Vale do Aço</p>
+            <p class="text-gray-500 text-sm">© 2024 SINMEVAÇO. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
