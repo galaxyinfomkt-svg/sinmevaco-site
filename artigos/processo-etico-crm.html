@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processo ético-profissional: como se defender perante o CRM - SINMEVAÇO</title>
+    <meta name="description" content="Orientações sobre como proceder se você receber uma notificação do Conselho Regional de Medicina. Conheça seus direitos e o processo.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'verde': { 50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d' }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%); }
+        .prose h2 { font-family: 'Playfair Display', serif; }
+        .prose p { line-height: 1.8; }
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #16a34a, #22c55e);
+            z-index: 100;
+            transition: width 0.1s;
+        }
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 4rem;
+            line-height: 0.8;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #16a34a;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+        }
+        blockquote {
+            border-left: 4px solid #16a34a;
+            background: linear-gradient(90deg, #f0fdf4, transparent);
+        }
+    </style>
+</head>
+<body class="font-sans bg-white">
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="progressBar"></div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../LOGO SINMEVAÇO.jpeg" alt="SINMEVAÇO" class="h-10 rounded-lg">
+                </a>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="../index.html" class="text-gray-600 hover:text-verde-600 font-medium text-sm">Início</a>
+                    <a href="../blog.html" class="text-verde-600 font-semibold text-sm">Blog</a>
+                    <a href="../noticias.html" class="text-gray-600 hover:text-verde-600 font-medium text-sm">Notícias</a>
+                </nav>
+                <a href="https://wa.me/5531995074027" class="flex items-center gap-2 bg-verde-600 text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-verde-700 transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    Contato
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 md:py-32">
+        <div class="max-w-4xl mx-auto px-4">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-2 text-verde-200 text-sm mb-8">
+                <a href="../index.html" class="hover:text-white">Início</a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                <a href="../blog.html" class="hover:text-white">Blog</a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                <span class="text-white">Jurídico</span>
+            </nav>
+
+            <!-- Category Badge -->
+            <span class="inline-block bg-verde-600 text-white px-4 py-1.5 rounded-full text-sm font-bold mb-6">JURÍDICO</span>
+
+            <!-- Title -->
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                Processo ético-profissional: como se defender perante o CRM
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-xl md:text-2xl text-verde-100 mb-8 leading-relaxed">
+                Orientações sobre como proceder se você receber uma notificação do Conselho Regional de Medicina.
+            </p>
+
+            <!-- Meta Info -->
+            <div class="flex flex-wrap items-center gap-6 text-verde-200">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-verde-600 flex items-center justify-center border-2 border-white/30">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+                    </div>
+                    <div>
+                        <p class="text-white font-semibold">Equipe Editorial SINMEVAÇO</p>
+                        <p class="text-sm">Conteúdo Informativo</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <span>17 de Dezembro, 2024</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <span>10 min de leitura</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Image -->
+    <div class="max-w-5xl mx-auto px-4 -mt-16 relative z-10">
+        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1200&q=80"
+             alt="Documentos jurídicos"
+             class="w-full h-[400px] md:h-[500px] object-cover rounded-2xl shadow-2xl">
+    </div>
+
+    <!-- Article Content -->
+    <article class="max-w-3xl mx-auto px-4 py-16">
+        <div class="prose prose-lg max-w-none">
+            <p class="drop-cap text-xl text-gray-700 mb-8">
+                Receber uma notificação do Conselho Regional de Medicina informando sobre a abertura de um processo ético-profissional é uma situação que gera grande preocupação para qualquer médico. É fundamental conhecer seus direitos, as etapas do processo e como se defender adequadamente.
+            </p>
+
+            <div class="bg-verde-50 border-l-4 border-verde-500 p-6 my-8 rounded-r-lg">
+                <h4 class="font-bold text-verde-800 mb-2">Importante</h4>
+                <p class="text-verde-700">Este artigo tem caráter informativo e não substitui a orientação de um advogado especializado. Se você está enfrentando um processo ético, procure assessoria jurídica especializada.</p>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">O que é um Processo Ético-Profissional?</h2>
+
+            <p class="text-gray-700 mb-6">
+                O processo ético-profissional (PEP) é o instrumento utilizado pelos Conselhos de Medicina para apurar possíveis infrações ao Código de Ética Médica. É regulamentado pela Resolução CFM nº 2.145/2016, que estabelece as normas processuais aplicáveis.
+            </p>
+
+            <p class="text-gray-700 mb-6">
+                O processo pode ser instaurado a partir de denúncia de pacientes, familiares, outros profissionais de saúde, instituições ou mesmo de ofício pelo próprio Conselho.
+            </p>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Fases do Processo Ético-Profissional</h2>
+
+            <p class="text-gray-700 mb-6">
+                De acordo com a Resolução CFM nº 2.145/2016, o processo ético-profissional passa por diversas fases:
+            </p>
+
+            <div class="grid md:grid-cols-1 gap-6 my-8">
+                <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-verde-500">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-8 h-8 bg-verde-600 text-white rounded-full flex items-center justify-center font-bold">1</span>
+                        <h4 class="font-bold text-gray-800">Sindicância</h4>
+                    </div>
+                    <p class="text-gray-600">Fase preliminar de investigação para apurar se há indícios suficientes de infração ética. Pode ser arquivada se não houver elementos para prosseguimento.</p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-verde-500">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-8 h-8 bg-verde-600 text-white rounded-full flex items-center justify-center font-bold">2</span>
+                        <h4 class="font-bold text-gray-800">Instauração do PEP</h4>
+                    </div>
+                    <p class="text-gray-600">Se a sindicância concluir pela existência de indícios, o processo é formalmente instaurado e o médico é notificado para apresentar defesa prévia.</p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-verde-500">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-8 h-8 bg-verde-600 text-white rounded-full flex items-center justify-center font-bold">3</span>
+                        <h4 class="font-bold text-gray-800">Instrução Processual</h4>
+                    </div>
+                    <p class="text-gray-600">Fase de produção de provas: oitiva de testemunhas, juntada de documentos, perícias. O médico tem direito de acompanhar todos os atos.</p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-verde-500">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-8 h-8 bg-verde-600 text-white rounded-full flex items-center justify-center font-bold">4</span>
+                        <h4 class="font-bold text-gray-800">Julgamento</h4>
+                    </div>
+                    <p class="text-gray-600">O processo é julgado pelo Tribunal de Ética Médica do CRM. O médico pode apresentar defesa oral antes do julgamento.</p>
+                </div>
+
+                <div class="bg-gray-50 p-6 rounded-xl border-l-4 border-verde-500">
+                    <div class="flex items-center gap-3 mb-3">
+                        <span class="w-8 h-8 bg-verde-600 text-white rounded-full flex items-center justify-center font-bold">5</span>
+                        <h4 class="font-bold text-gray-800">Recursos</h4>
+                    </div>
+                    <p class="text-gray-600">Da decisão do CRM cabe recurso ao Conselho Federal de Medicina no prazo de 30 dias.</p>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Penalidades Previstas</h2>
+
+            <p class="text-gray-700 mb-6">
+                O Código de Ética Médica (Resolução CFM nº 2.217/2018) prevê as seguintes penalidades, aplicadas conforme a gravidade da infração:
+            </p>
+
+            <ul class="list-disc pl-6 mb-6 space-y-3 text-gray-700">
+                <li><strong>Advertência confidencial:</strong> Repreensão reservada, aplicada em infrações leves</li>
+                <li><strong>Censura confidencial:</strong> Penalidade mais severa que a advertência, também reservada</li>
+                <li><strong>Censura pública:</strong> Divulgação da penalidade em órgão oficial do CRM</li>
+                <li><strong>Suspensão do exercício profissional:</strong> Período de até 30 dias</li>
+                <li><strong>Cassação do exercício profissional:</strong> Penalidade máxima, aplicável apenas em casos gravíssimos</li>
+            </ul>
+
+            <blockquote class="pl-6 py-4 my-8 text-xl italic text-gray-700">
+                "A ampla defesa e o contraditório são direitos fundamentais garantidos pela Constituição Federal e devem ser respeitados em todo processo ético-profissional."
+            </blockquote>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Seus Direitos Durante o Processo</h2>
+
+            <p class="text-gray-700 mb-6">
+                Todo médico investigado ou processado tem direitos garantidos pela legislação:
+            </p>
+
+            <ul class="list-disc pl-6 mb-6 space-y-3 text-gray-700">
+                <li>Ser notificado de todos os atos processuais</li>
+                <li>Ter acesso integral aos autos do processo</li>
+                <li>Ser representado por advogado em todas as fases</li>
+                <li>Apresentar defesa escrita e oral</li>
+                <li>Indicar testemunhas e produzir provas</li>
+                <li>Recorrer das decisões</li>
+                <li>Ter o processo julgado em prazo razoável</li>
+            </ul>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Dicas Práticas de Defesa</h2>
+
+            <div class="bg-gray-900 text-white p-8 rounded-2xl my-8">
+                <h4 class="text-xl font-bold mb-6">O que fazer ao receber uma notificação</h4>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 bg-verde-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Mantenha a calma</p>
+                            <p class="text-gray-400 text-sm">Nem toda denúncia resulta em condenação. Muitos processos são arquivados.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 bg-verde-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Procure assessoria jurídica especializada</p>
+                            <p class="text-gray-400 text-sm">Advogados com experiência em direito médico conhecem as particularidades do processo.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 bg-verde-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Reúna toda a documentação</p>
+                            <p class="text-gray-400 text-sm">Prontuários, exames, termos de consentimento e qualquer documento relacionado ao caso.</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 bg-verde-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Respeite os prazos</p>
+                            <p class="text-gray-400 text-sm">A perda de prazo pode prejudicar significativamente sua defesa.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">O Papel do Sindicato</h2>
+
+            <p class="text-gray-700 mb-6">
+                O SINMEVAÇO oferece suporte aos médicos filiados que enfrentam processos éticos. Nossa assessoria jurídica pode orientá-lo sobre os procedimentos, direitos e estratégias de defesa, além de indicar advogados especializados quando necessário.
+            </p>
+
+            <div class="bg-verde-50 border-l-4 border-verde-500 p-6 my-8 rounded-r-lg">
+                <h4 class="font-bold text-verde-800 mb-2">SINMEVAÇO ao seu lado</h4>
+                <p class="text-verde-700">Médicos filiados contam com orientação jurídica inicial gratuita. Entre em contato pelo WhatsApp: (31) 99507-4027</p>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Prevenção é o Melhor Caminho</h2>
+
+            <p class="text-gray-700 mb-6">
+                A melhor forma de evitar problemas éticos é a prevenção. Algumas práticas recomendadas:
+            </p>
+
+            <ul class="list-disc pl-6 mb-6 space-y-3 text-gray-700">
+                <li>Manter prontuários completos e bem organizados</li>
+                <li>Utilizar termos de consentimento informado adequados</li>
+                <li>Manter comunicação clara e respeitosa com pacientes</li>
+                <li>Conhecer e seguir o Código de Ética Médica</li>
+                <li>Documentar todas as orientações dadas aos pacientes</li>
+                <li>Manter-se atualizado sobre normas e resoluções do CFM</li>
+            </ul>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Conclusão</h2>
+
+            <p class="text-gray-700 mb-6">
+                Enfrentar um processo ético-profissional é desafiador, mas conhecer seus direitos e contar com orientação adequada faz toda a diferença. O mais importante é não enfrentar essa situação sozinho: busque apoio jurídico especializado e conte com seu sindicato.
+            </p>
+
+            <p class="text-gray-700 mb-6">
+                Lembre-se: a maioria dos processos éticos resulta em arquivamento ou penalidades leves. Com uma defesa bem conduzida, suas chances de um resultado favorável são significativas.
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mt-12 pt-8 border-t border-gray-200">
+                <span class="text-sm text-gray-500">Tags:</span>
+                <a href="#" class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-verde-100 hover:text-verde-700">Jurídico</a>
+                <a href="#" class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-verde-100 hover:text-verde-700">CRM</a>
+                <a href="#" class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-verde-100 hover:text-verde-700">Ética Médica</a>
+                <a href="#" class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-verde-100 hover:text-verde-700">Defesa</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Author Box -->
+    <div class="max-w-3xl mx-auto px-4 mb-16">
+        <div class="bg-gray-50 rounded-2xl p-8 flex flex-col md:flex-row gap-6 items-center md:items-start">
+            <div class="w-24 h-24 rounded-full bg-verde-600 flex items-center justify-center">
+                <svg class="w-12 h-12 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z"/></svg>
+            </div>
+            <div class="text-center md:text-left">
+                <h4 class="font-bold text-xl text-gray-800 mb-2">Equipe Editorial SINMEVAÇO</h4>
+                <p class="text-verde-600 font-medium mb-3">Conteúdo Informativo para Médicos</p>
+                <p class="text-gray-600">Este artigo foi elaborado com base na legislação vigente (Resolução CFM nº 2.145/2016 e Código de Ética Médica). Para orientação sobre casos específicos, consulte um advogado especializado.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-verde-700">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Precisa de orientação jurídica?</h2>
+            <p class="text-verde-100 text-lg mb-8">O SINMEVAÇO oferece assessoria jurídica inicial para médicos filiados. Entre em contato!</p>
+            <a href="https://wa.me/5531995074027?text=Olá! Preciso de orientação sobre processo ético" class="inline-flex items-center gap-2 bg-white text-verde-700 px-8 py-4 rounded-full font-bold hover:bg-verde-50 transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                Falar com Especialista
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-verde-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+                <div>
+                    <div class="flex items-center gap-3 mb-6">
+                        <img src="../LOGO SINMEVAÇO.jpeg" alt="SINMEVAÇO" class="h-12 w-auto rounded-lg">
+                        <span class="font-bold text-lg">Sinmevaço</span>
+                    </div>
+                    <p class="text-white text-sm opacity-90">
+                        Há mais de 30 anos defendendo os direitos e interesses dos médicos do Vale do Aço.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-white text-sm">
+                        <li><a href="../index.html" class="hover:text-verde-300 transition-colors">Início</a></li>
+                        <li><a href="../blog.html" class="hover:text-verde-300 transition-colors">Blog</a></li>
+                        <li><a href="../noticias.html" class="hover:text-verde-300 transition-colors">Notícias</a></li>
+                        <li><a href="../index.html#contato" class="hover:text-verde-300 transition-colors">Contato</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Serviços</h4>
+                    <ul class="space-y-2 text-white text-sm">
+                        <li><a href="../servicos/defesa-juridica.html" class="hover:text-verde-300 transition-colors">Assessoria Jurídica</a></li>
+                        <li><a href="#" class="hover:text-verde-300 transition-colors">Negociação Coletiva</a></li>
+                        <li><a href="#" class="hover:text-verde-300 transition-colors">Apoio ao Médico</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold text-white mb-4">Contato</h4>
+                    <ul class="space-y-2 text-white text-sm">
+                        <li>Coronel Fabriciano, MG</li>
+                        <li>(31) 99507-4027</li>
+                        <li>contato@sinmevaco.com.br</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-verde-800 pt-8 text-center text-white text-sm opacity-80">
+                <p>&copy; 2024 SINMEVAÇO - Sindicato dos Médicos do Vale do Aço. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Reading Progress Script -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+    </script>
+
+</body>
+</html>
