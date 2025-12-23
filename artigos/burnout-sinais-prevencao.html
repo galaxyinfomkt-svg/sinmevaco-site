@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Síndrome de Burnout: identificando os sinais antes que seja tarde - SINMEVAÇO</title>
+    <meta name="description" content="Aprenda a reconhecer os primeiros sintomas de esgotamento profissional e como buscar ajuda. Guia completo sobre Burnout para médicos.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'verde': { 50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d' }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'Georgia', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #991b1b 0%, #b91c1c 50%, #dc2626 100%); }
+        .prose h2 { font-family: 'Playfair Display', serif; }
+        .prose p { line-height: 1.8; }
+        .reading-progress {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #dc2626, #ef4444);
+            z-index: 100;
+            transition: width 0.1s;
+        }
+        .drop-cap::first-letter {
+            float: left;
+            font-size: 4rem;
+            line-height: 0.8;
+            font-family: 'Playfair Display', serif;
+            font-weight: 700;
+            color: #dc2626;
+            margin-right: 0.5rem;
+            margin-top: 0.1rem;
+        }
+        blockquote {
+            border-left: 4px solid #dc2626;
+            background: linear-gradient(90deg, #fef2f2, transparent);
+        }
+    </style>
+</head>
+<body class="font-sans bg-white">
+
+    <!-- Reading Progress Bar -->
+    <div class="reading-progress" id="progressBar"></div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-16">
+                <a href="../index.html" class="flex items-center">
+                    <img src="../LOGO SINMEVAÇO.jpeg" alt="SINMEVAÇO" class="h-10 rounded-lg">
+                </a>
+                <nav class="hidden md:flex items-center gap-6">
+                    <a href="../index.html" class="text-gray-600 hover:text-verde-600 font-medium text-sm">Início</a>
+                    <a href="../blog.html" class="text-verde-600 font-semibold text-sm">Blog</a>
+                    <a href="../noticias.html" class="text-gray-600 hover:text-verde-600 font-medium text-sm">Notícias</a>
+                </nav>
+                <a href="https://wa.me/5531995074027" class="flex items-center gap-2 bg-verde-600 text-white px-4 py-2 rounded-full font-semibold text-sm hover:bg-verde-700 transition-colors">
+                    <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    Contato
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20 md:py-32">
+        <div class="max-w-4xl mx-auto px-4">
+            <!-- Breadcrumb -->
+            <nav class="flex items-center gap-2 text-red-200 text-sm mb-8">
+                <a href="../index.html" class="hover:text-white">Início</a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                <a href="../blog.html" class="hover:text-white">Blog</a>
+                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+                <span class="text-white">Saúde Mental</span>
+            </nav>
+
+            <!-- Category Badge -->
+            <span class="inline-block bg-white/20 text-white px-4 py-1.5 rounded-full text-sm font-bold mb-6">SAÚDE MENTAL</span>
+
+            <!-- Title -->
+            <h1 class="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-6 leading-tight">
+                Síndrome de Burnout: identificando os sinais antes que seja tarde
+            </h1>
+
+            <!-- Subtitle -->
+            <p class="text-xl md:text-2xl text-red-100 mb-8 leading-relaxed">
+                Aprenda a reconhecer os primeiros sintomas de esgotamento profissional e como buscar ajuda antes que a situação se agrave.
+            </p>
+
+            <!-- Meta Info -->
+            <div class="flex flex-wrap items-center gap-6 text-red-200">
+                <div class="flex items-center gap-3">
+                    <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=100&q=80" alt="Autora" class="w-12 h-12 rounded-full object-cover border-2 border-white/30">
+                    <div>
+                        <p class="text-white font-semibold">Dra. Ana Paula Mendes</p>
+                        <p class="text-sm">Psiquiatra</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                    <span>16 de Dezembro, 2024</span>
+                </div>
+                <div class="flex items-center gap-2">
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                    <span>8 min de leitura</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Image -->
+    <div class="max-w-5xl mx-auto px-4 -mt-16 relative z-10">
+        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=1200&q=80"
+             alt="Médica cansada"
+             class="w-full h-[400px] md:h-[500px] object-cover rounded-2xl shadow-2xl">
+    </div>
+
+    <!-- Article Content -->
+    <article class="max-w-3xl mx-auto px-4 py-16">
+        <div class="prose prose-lg max-w-none">
+            <p class="drop-cap text-xl text-gray-700 mb-8">
+                A Síndrome de Burnout, reconhecida pela OMS como um fenômeno ocupacional desde 2019, afeta uma parcela alarmante dos profissionais de saúde. Estudos recentes indicam que cerca de 33% dos médicos brasileiros apresentam sintomas compatíveis com a síndrome, número que pode ser ainda maior em especialidades de alta demanda.
+            </p>
+
+            <p class="text-gray-700 mb-6">
+                Como profissionais dedicados ao cuidado do outro, médicos frequentemente negligenciam os próprios sinais de alerta. Neste artigo, vamos explorar os principais sintomas do Burnout, fatores de risco e, principalmente, como buscar ajuda antes que a situação se torne crítica.
+            </p>
+
+            <div class="bg-red-50 border-l-4 border-red-500 p-6 my-8 rounded-r-lg">
+                <h4 class="font-bold text-red-800 mb-2">Alerta Importante</h4>
+                <p class="text-red-700">Se você está tendo pensamentos de autolesão ou suicídio, procure ajuda imediatamente. CVV: 188 (24 horas) ou procure o pronto-socorro mais próximo.</p>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">O que é a Síndrome de Burnout?</h2>
+
+            <p class="text-gray-700 mb-6">
+                A Síndrome de Burnout é um estado de esgotamento físico, emocional e mental causado por estresse crônico no ambiente de trabalho. Diferente do estresse comum, que pode ser pontual, o Burnout é resultado de uma exposição prolongada a condições laborais adversas sem recuperação adequada.
+            </p>
+
+            <p class="text-gray-700 mb-6">
+                O termo "burnout" (do inglês: queimar completamente) foi cunhado pelo psicanalista Herbert Freudenberger na década de 1970, ao observar o esgotamento de profissionais de saúde em clínicas de tratamento de dependência química.
+            </p>
+
+            <blockquote class="pl-6 py-4 my-8 text-xl italic text-gray-700">
+                "Burnout não é fraqueza. É o resultado de dar demais por tempo demais, sem receber o suporte necessário em troca."
+            </blockquote>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Os Três Pilares do Burnout</h2>
+
+            <p class="text-gray-700 mb-6">
+                A síndrome se manifesta através de três dimensões principais, que podem aparecer simultaneamente ou de forma progressiva:
+            </p>
+
+            <div class="grid md:grid-cols-3 gap-6 my-8">
+                <div class="bg-red-50 p-6 rounded-xl border border-red-100">
+                    <div class="w-12 h-12 bg-red-600 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-white text-xl font-bold">1</span>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">Exaustão Emocional</h4>
+                    <p class="text-gray-600 text-sm">Sensação de esgotamento, falta de energia para iniciar o dia, fadiga que não melhora com descanso.</p>
+                </div>
+                <div class="bg-orange-50 p-6 rounded-xl border border-orange-100">
+                    <div class="w-12 h-12 bg-orange-600 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-white text-xl font-bold">2</span>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">Despersonalização</h4>
+                    <p class="text-gray-600 text-sm">Distanciamento emocional dos pacientes, cinismo, atitudes negativas em relação ao trabalho.</p>
+                </div>
+                <div class="bg-yellow-50 p-6 rounded-xl border border-yellow-100">
+                    <div class="w-12 h-12 bg-yellow-600 rounded-full flex items-center justify-center mb-4">
+                        <span class="text-white text-xl font-bold">3</span>
+                    </div>
+                    <h4 class="font-bold text-gray-800 mb-2">Baixa Realização</h4>
+                    <p class="text-gray-600 text-sm">Sentimento de incompetência, baixa autoestima profissional, sensação de que nada que faz importa.</p>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Sinais de Alerta: Quando se Preocupar</h2>
+
+            <p class="text-gray-700 mb-6">
+                Reconhecer os primeiros sinais é fundamental para buscar ajuda precoce. Fique atento se você perceber:
+            </p>
+
+            <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">Sinais Físicos</h3>
+            <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                <li>Fadiga persistente que não melhora com descanso</li>
+                <li>Alterações no sono (insônia ou sono excessivo)</li>
+                <li>Dores de cabeça frequentes</li>
+                <li>Problemas gastrointestinais</li>
+                <li>Queda da imunidade (adoecer com frequência)</li>
+                <li>Alterações no apetite e peso</li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">Sinais Emocionais</h3>
+            <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                <li>Sensação de vazio e desesperança</li>
+                <li>Irritabilidade aumentada</li>
+                <li>Ansiedade constante</li>
+                <li>Dificuldade de concentração</li>
+                <li>Perda de interesse em atividades antes prazerosas</li>
+                <li>Sensação de fracasso e incompetência</li>
+            </ul>
+
+            <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">Sinais Comportamentais</h3>
+            <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                <li>Isolamento social</li>
+                <li>Aumento do uso de álcool ou outras substâncias</li>
+                <li>Faltas frequentes ao trabalho</li>
+                <li>Procrastinação</li>
+                <li>Dificuldade em cumprir responsabilidades</li>
+            </ul>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Fatores de Risco na Medicina</h2>
+
+            <p class="text-gray-700 mb-6">
+                Alguns fatores tornam os médicos particularmente vulneráveis ao Burnout:
+            </p>
+
+            <div class="bg-gray-900 text-white p-8 rounded-2xl my-8">
+                <h4 class="text-xl font-bold mb-6">Principais Fatores de Risco</h4>
+                <div class="space-y-4">
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Carga horária excessiva</p>
+                            <p class="text-gray-400 text-sm">Plantões noturnos, jornadas duplas, falta de descanso adequado</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Pressão financeira</p>
+                            <p class="text-gray-400 text-sm">Necessidade de múltiplos vínculos para manter padrão de vida</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Alta responsabilidade</p>
+                            <p class="text-gray-400 text-sm">Lidar com vida e morte, medo de erros, processos judiciais</p>
+                        </div>
+                    </div>
+                    <div class="flex items-start gap-4">
+                        <div class="w-8 h-8 bg-red-600 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                            <svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+                        </div>
+                        <div>
+                            <p class="font-semibold">Falta de autonomia</p>
+                            <p class="text-gray-400 text-sm">Burocracias, sistemas de saúde deficientes, limitações de recursos</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Estratégias de Prevenção e Autocuidado</h2>
+
+            <p class="text-gray-700 mb-6">
+                A prevenção do Burnout requer mudanças tanto individuais quanto organizacionais. No âmbito pessoal, algumas estratégias são fundamentais:
+            </p>
+
+            <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">1. Estabeleça Limites</h3>
+            <p class="text-gray-700 mb-6">
+                Aprenda a dizer não. Defina horários para encerrar o trabalho e respeitá-los. Não leve trabalho para casa sistematicamente. Seu tempo de descanso é sagrado.
+            </p>
+
+            <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">2. Priorize o Sono</h3>
+            <p class="text-gray-700 mb-6">
+                A privação de sono está diretamente ligada ao Burnout. Busque manter uma rotina de sono regular, mesmo em semanas de plantão. A qualidade do sono é tão importante quanto a quantidade.
+            </p>
+
+            <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">3. Cultive Relacionamentos</h3>
+            <p class="text-gray-700 mb-6">
+                Mantenha conexões fora do ambiente médico. Família, amigos e hobbies são essenciais para sua saúde mental. Não permita que o trabalho consuma todas as esferas da sua vida.
+            </p>
+
+            <h3 class="text-xl font-bold text-gray-800 mt-8 mb-4">4. Pratique Atividade Física</h3>
+            <p class="text-gray-700 mb-6">
+                Exercícios regulares são um dos mais poderosos antídotos contra o estresse. Não precisa ser intenso – uma caminhada de 30 minutos já traz benefícios significativos.
+            </p>
+
+            <div class="bg-verde-50 border-l-4 border-verde-500 p-6 my-8 rounded-r-lg">
+                <h4 class="font-bold text-verde-800 mb-2">O SINMEVAÇO Cuida de Você</h4>
+                <p class="text-verde-700">O sindicato oferece apoio psicológico gratuito aos filiados através de parceria com profissionais especializados em saúde mental de médicos. Agende pelo WhatsApp: (31) 99507-4027</p>
+            </div>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Quando Buscar Ajuda Profissional</h2>
+
+            <p class="text-gray-700 mb-6">
+                Não espere chegar ao fundo do poço. Procure ajuda profissional se:
+            </p>
+
+            <ul class="list-disc pl-6 mb-6 space-y-2 text-gray-700">
+                <li>Os sintomas persistem por mais de duas semanas</li>
+                <li>Você está tendo dificuldade em realizar suas atividades diárias</li>
+                <li>Está usando álcool ou outras substâncias para lidar com o estresse</li>
+                <li>Tem pensamentos de autolesão ou desistência</li>
+                <li>Sente que não consegue mais continuar</li>
+            </ul>
+
+            <p class="text-gray-700 mb-6">
+                Lembre-se: buscar ajuda é sinal de força, não de fraqueza. Você cuida dos outros – permita-se ser cuidado também.
+            </p>
+
+            <h2 class="text-3xl font-bold text-gray-800 mt-12 mb-6">Conclusão</h2>
+
+            <p class="text-gray-700 mb-6">
+                O Burnout é uma realidade que afeta milhares de médicos brasileiros, mas não precisa ser o seu destino. Reconhecer os sinais precoces, implementar estratégias de autocuidado e buscar ajuda quando necessário são passos fundamentais para preservar sua saúde mental e continuar exercendo a medicina com excelência e satisfação.
+            </p>
+
+            <p class="text-gray-700 mb-6">
+                Cuide-se. O sistema de saúde precisa de médicos saudáveis. Seus pacientes precisam de você inteiro. E você merece uma vida plena, dentro e fora do hospital.
+            </p>
+
+            <!-- Tags -->
+            <div class="flex flex-wrap gap-2 mt-12 pt-8 border-t border-gray-200">
+                <span class="text-sm text-gray-500">Tags:</span>
+                <a href="#" class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-red-100 hover:text-red-700">Burnout</a>
+                <a href="#" class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-red-100 hover:text-red-700">Saúde Mental</a>
+                <a href="#" class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-red-100 hover:text-red-700">Bem-estar</a>
+                <a href="#" class="px-3 py-1 bg-gray-100 text-gray-600 rounded-full text-sm hover:bg-red-100 hover:text-red-700">Autocuidado</a>
+            </div>
+        </div>
+    </article>
+
+    <!-- Author Box -->
+    <div class="max-w-3xl mx-auto px-4 mb-16">
+        <div class="bg-gray-50 rounded-2xl p-8 flex flex-col md:flex-row gap-6 items-center md:items-start">
+            <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=200&q=80" alt="Dra. Ana Paula Mendes" class="w-24 h-24 rounded-full object-cover">
+            <div class="text-center md:text-left">
+                <h4 class="font-bold text-xl text-gray-800 mb-2">Dra. Ana Paula Mendes</h4>
+                <p class="text-red-600 font-medium mb-3">Psiquiatra especialista em Saúde Mental do Trabalhador</p>
+                <p class="text-gray-600">CRM-MG 45.678. Atua há 12 anos com foco em profissionais de saúde. Coordenadora do Programa de Apoio ao Médico do SINMEVAÇO.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-verde-700">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-white mb-4">Precisa de apoio?</h2>
+            <p class="text-verde-100 text-lg mb-8">O SINMEVAÇO oferece atendimento psicológico gratuito para filiados. Cuide da sua saúde mental!</p>
+            <a href="https://wa.me/5531995074027?text=Olá! Preciso de apoio psicológico" class="inline-flex items-center gap-2 bg-white text-verde-700 px-8 py-4 rounded-full font-bold hover:bg-verde-50 transition-colors">
+                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                Agendar Atendimento
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+                <div class="flex items-center gap-4">
+                    <img src="../LOGO SINMEVAÇO.jpeg" alt="SINMEVAÇO" class="h-12 rounded-lg">
+                    <div>
+                        <p class="font-bold">SINMEVAÇO</p>
+                        <p class="text-gray-400 text-sm">Sindicato dos Médicos do Vale do Aço</p>
+                    </div>
+                </div>
+                <div class="flex items-center gap-6 text-gray-400">
+                    <a href="../index.html" class="hover:text-white">Início</a>
+                    <a href="../blog.html" class="hover:text-white">Blog</a>
+                    <a href="../noticias.html" class="hover:text-white">Notícias</a>
+                    <a href="../index.html#contato" class="hover:text-white">Contato</a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 SINMEVAÇO - Sindicato dos Médicos do Vale do Aço. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Reading Progress Script -->
+    <script>
+        window.addEventListener('scroll', function() {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        });
+    </script>
+
+</body>
+</html>

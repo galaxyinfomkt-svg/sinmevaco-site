@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca Virtual - SINMEVAÇO | Acervo Científico para Médicos</title>
+    <meta name="description" content="Biblioteca Virtual do SINMEVAÇO. Acesso a mais de 7 mil títulos de revistas científicas, artigos e publicações médicas.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'verde': { 50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac', 400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d', 800: '#166534', 900: '#14532d' }
+                    },
+                    fontFamily: { 'sans': ['Inter', 'system-ui', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .hero-gradient { background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%); }
+        .card-hover { transition: all 0.3s ease; }
+        .card-hover:hover { transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,0,0,0.1); }
+        .category-card:hover { transform: scale(1.02); }
+        .search-input:focus { box-shadow: 0 0 0 4px rgba(22, 163, 74, 0.2); }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+
+    <!-- Top Bar -->
+    <div class="bg-verde-900 text-white py-2 text-sm">
+        <div class="max-w-7xl mx-auto px-4 flex items-center justify-between">
+            <div class="flex items-center gap-4">
+                <a href="tel:+5531995074027" class="flex items-center gap-2 hover:text-verde-300 transition-colors font-medium tracking-wide">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+                    </svg>
+                    <span class="font-semibold">(31) 99507-4027</span>
+                </a>
+                <span class="hidden md:inline text-verde-400">|</span>
+                <span class="hidden md:flex items-center gap-2">
+                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"/>
+                    </svg>
+                    Coronel Fabriciano, MG - Vale do Aço
+                </span>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="https://wa.me/5531995074027" class="hover:text-verde-300 transition-colors">WhatsApp</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <a href="./index.html" class="flex items-center">
+                    <img src="./LOGO SINMEVAÇO.jpeg" alt="SINMEVAÇO" class="h-12 rounded-lg shadow">
+                </a>
+                <nav class="hidden lg:flex items-center gap-6">
+                    <a href="./index.html" class="text-gray-600 hover:text-verde-600 font-medium">Início</a>
+                    <a href="./index.html#servicos" class="text-gray-600 hover:text-verde-600 font-medium">Serviços</a>
+                    <a href="./noticias.html" class="text-gray-600 hover:text-verde-600 font-medium">Notícias</a>
+                    <a href="./blog.html" class="text-gray-600 hover:text-verde-600 font-medium">Blog</a>
+                    <a href="./biblioteca.html" class="text-verde-600 font-semibold">Biblioteca</a>
+                    <a href="./index.html#contato" class="text-gray-600 hover:text-verde-600 font-medium">Contato</a>
+                </nav>
+                <a href="https://wa.me/5531995074027" class="hidden sm:flex items-center gap-2 bg-verde-600 text-white px-5 py-2.5 rounded-full font-semibold hover:bg-verde-700 transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    Falar Conosco
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient py-20">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center max-w-4xl mx-auto">
+                <!-- Icon -->
+                <div class="inline-flex items-center justify-center w-24 h-24 bg-white/20 rounded-2xl mb-8">
+                    <svg class="w-14 h-14 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"/>
+                    </svg>
+                </div>
+
+                <h1 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                    Biblioteca Virtual
+                </h1>
+                <div class="w-24 h-1 bg-verde-400 mx-auto mb-6"></div>
+                <p class="text-xl md:text-2xl text-verde-100 mb-8 leading-relaxed">
+                    Acesso exclusivo para filiados a mais de <strong class="text-white">7 mil títulos</strong> de revistas científicas em todas as especialidades médicas e <strong class="text-white">milhões de artigos</strong> científicos.
+                </p>
+
+                <!-- Search Bar -->
+                <div class="max-w-2xl mx-auto mb-8">
+                    <div class="relative">
+                        <input type="text" placeholder="Buscar artigos, revistas, publicações..."
+                               class="search-input w-full px-6 py-4 pr-14 rounded-full text-gray-800 text-lg focus:outline-none transition-all">
+                        <button class="absolute right-2 top-1/2 -translate-y-1/2 bg-verde-600 text-white p-3 rounded-full hover:bg-verde-700 transition-colors">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Quick Access Buttons -->
+                <div class="flex flex-wrap justify-center gap-4">
+                    <a href="#acervo" class="bg-white text-verde-700 px-8 py-4 rounded-full font-bold hover:bg-verde-50 transition-all flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"/>
+                        </svg>
+                        Explorar Acervo
+                    </a>
+                    <a href="https://wa.me/5531995074027?text=Olá! Gostaria de ter acesso à Biblioteca Virtual" class="bg-verde-600 text-white px-8 py-4 rounded-full font-bold hover:bg-verde-500 transition-all border border-verde-400 flex items-center gap-2">
+                        <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                        Solicitar Acesso
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-12 bg-white border-b">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-verde-600 mb-2">7.000+</div>
+                    <div class="text-gray-600 font-medium">Títulos de Revistas</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-verde-600 mb-2">2M+</div>
+                    <div class="text-gray-600 font-medium">Artigos Científicos</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-verde-600 mb-2">50+</div>
+                    <div class="text-gray-600 font-medium">Especialidades</div>
+                </div>
+                <div class="p-6">
+                    <div class="text-4xl md:text-5xl font-bold text-verde-600 mb-2">24/7</div>
+                    <div class="text-gray-600 font-medium">Acesso Online</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="acervo" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-verde-600 font-semibold text-sm uppercase tracking-wider">Acervo Completo</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 text-gray-800">Explore por Especialidade</h2>
+                <div class="w-24 h-1 bg-verde-500 mx-auto mt-4"></div>
+                <p class="text-gray-600 mt-4 max-w-2xl mx-auto">Navegue pelo nosso acervo organizado por especialidades médicas e encontre exatamente o que você precisa.</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                <!-- Category Cards -->
+                <a href="#" class="category-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-verde-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-verde-600 transition-colors">
+                        <svg class="w-7 h-7 text-verde-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Cardiologia</h3>
+                    <p class="text-sm text-gray-500">450+ publicações</p>
+                </a>
+
+                <a href="#" class="category-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-blue-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-blue-600 transition-colors">
+                        <svg class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Neurologia</h3>
+                    <p class="text-sm text-gray-500">380+ publicações</p>
+                </a>
+
+                <a href="#" class="category-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-purple-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-purple-600 transition-colors">
+                        <svg class="w-7 h-7 text-purple-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Oncologia</h3>
+                    <p class="text-sm text-gray-500">520+ publicações</p>
+                </a>
+
+                <a href="#" class="category-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-orange-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-orange-600 transition-colors">
+                        <svg class="w-7 h-7 text-orange-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m3 5.197v-1"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Pediatria</h3>
+                    <p class="text-sm text-gray-500">410+ publicações</p>
+                </a>
+
+                <a href="#" class="category-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-pink-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-pink-600 transition-colors">
+                        <svg class="w-7 h-7 text-pink-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Ginecologia</h3>
+                    <p class="text-sm text-gray-500">360+ publicações</p>
+                </a>
+
+                <a href="#" class="category-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-cyan-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-cyan-600 transition-colors">
+                        <svg class="w-7 h-7 text-cyan-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Ortopedia</h3>
+                    <p class="text-sm text-gray-500">290+ publicações</p>
+                </a>
+
+                <a href="#" class="category-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-yellow-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-yellow-600 transition-colors">
+                        <svg class="w-7 h-7 text-yellow-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Oftalmologia</h3>
+                    <p class="text-sm text-gray-500">210+ publicações</p>
+                </a>
+
+                <a href="#" class="category-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-red-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-red-600 transition-colors">
+                        <svg class="w-7 h-7 text-red-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Cirurgia Geral</h3>
+                    <p class="text-sm text-gray-500">480+ publicações</p>
+                </a>
+
+                <a href="#" class="category-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-indigo-600 transition-colors">
+                        <svg class="w-7 h-7 text-indigo-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Psiquiatria</h3>
+                    <p class="text-sm text-gray-500">320+ publicações</p>
+                </a>
+
+                <a href="#" class="category-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-teal-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-teal-600 transition-colors">
+                        <svg class="w-7 h-7 text-teal-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Dermatologia</h3>
+                    <p class="text-sm text-gray-500">270+ publicações</p>
+                </a>
+
+                <a href="#" class="category-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-lime-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-lime-600 transition-colors">
+                        <svg class="w-7 h-7 text-lime-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Endocrinologia</h3>
+                    <p class="text-sm text-gray-500">240+ publicações</p>
+                </a>
+
+                <a href="#" class="category-card bg-white rounded-2xl p-6 shadow-sm hover:shadow-lg transition-all group">
+                    <div class="w-14 h-14 bg-gray-100 rounded-xl flex items-center justify-center mb-4 group-hover:bg-verde-600 transition-colors">
+                        <svg class="w-7 h-7 text-gray-600 group-hover:text-white transition-colors" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 12h.01M12 12h.01M19 12h.01M6 12a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0zm7 0a1 1 0 11-2 0 1 1 0 012 0z"/>
+                        </svg>
+                    </div>
+                    <h3 class="font-bold text-gray-800 mb-1">Ver Todas</h3>
+                    <p class="text-sm text-gray-500">50+ especialidades</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Publications -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-verde-600 font-semibold text-sm uppercase tracking-wider">Destaques</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 text-gray-800">Publicações em Destaque</h2>
+                <div class="w-24 h-1 bg-verde-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Publication Card 1 -->
+                <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-verde-600 to-verde-800 p-6 flex flex-col justify-between">
+                        <span class="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold w-fit">CARDIOLOGIA</span>
+                        <div>
+                            <h3 class="text-white font-bold text-lg">The New England Journal of Medicine</h3>
+                            <p class="text-verde-200 text-sm">Edição Dezembro 2024</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Avanços no Tratamento da Insuficiência Cardíaca</h4>
+                        <p class="text-gray-600 text-sm mb-4">Revisão sistemática dos novos tratamentos farmacológicos para ICC com fração de ejeção reduzida.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">Publicado em 15/12/2024</span>
+                            <a href="#" class="text-verde-600 font-semibold text-sm hover:text-verde-700">Ler mais →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Publication Card 2 -->
+                <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-blue-600 to-blue-800 p-6 flex flex-col justify-between">
+                        <span class="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold w-fit">NEUROLOGIA</span>
+                        <div>
+                            <h3 class="text-white font-bold text-lg">The Lancet Neurology</h3>
+                            <p class="text-blue-200 text-sm">Edição Dezembro 2024</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Terapias Emergentes para Alzheimer</h4>
+                        <p class="text-gray-600 text-sm mb-4">Análise dos anticorpos monoclonais anti-amiloide e seu impacto na progressão da doença.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">Publicado em 10/12/2024</span>
+                            <a href="#" class="text-verde-600 font-semibold text-sm hover:text-verde-700">Ler mais →</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Publication Card 3 -->
+                <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                    <div class="h-48 bg-gradient-to-br from-purple-600 to-purple-800 p-6 flex flex-col justify-between">
+                        <span class="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold w-fit">ONCOLOGIA</span>
+                        <div>
+                            <h3 class="text-white font-bold text-lg">Journal of Clinical Oncology</h3>
+                            <p class="text-purple-200 text-sm">Edição Dezembro 2024</p>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="font-bold text-gray-800 mb-2">Imunoterapia: Novos Horizontes</h4>
+                        <p class="text-gray-600 text-sm mb-4">CAR-T cells e checkpoint inhibitors: resultados de longo prazo em tumores sólidos.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs text-gray-500">Publicado em 08/12/2024</span>
+                            <a href="#" class="text-verde-600 font-semibold text-sm hover:text-verde-700">Ler mais →</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="#" class="inline-flex items-center gap-2 bg-verde-600 text-white px-8 py-4 rounded-full font-bold hover:bg-verde-700 transition-colors">
+                    Ver Todas as Publicações
+                    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Section -->
+    <section class="py-20 bg-verde-900">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-verde-400 font-semibold text-sm uppercase tracking-wider">Recursos</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 text-white">Bases de Dados Disponíveis</h2>
+                <div class="w-24 h-1 bg-verde-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-white">PM</span>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">PubMed</h3>
+                    <p class="text-verde-200 text-sm">Acesso completo à maior base de dados biomédica do mundo.</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-white">SC</span>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">SciELO</h3>
+                    <p class="text-verde-200 text-sm">Biblioteca científica com publicações latino-americanas.</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-white">CO</span>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Cochrane</h3>
+                    <p class="text-verde-200 text-sm">Revisões sistemáticas de alta qualidade em saúde.</p>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
+                    <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-white">UD</span>
+                    </div>
+                    <h3 class="font-bold text-white text-lg mb-2">UpToDate</h3>
+                    <p class="text-verde-200 text-sm">Informações clínicas baseadas em evidências atualizadas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How to Access Section -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-16">
+                <span class="text-verde-600 font-semibold text-sm uppercase tracking-wider">Passo a Passo</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-3 text-gray-800">Como Acessar a Biblioteca</h2>
+                <div class="w-24 h-1 bg-verde-500 mx-auto mt-4"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-verde-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold">1</div>
+                    <h3 class="font-bold text-xl text-gray-800 mb-3">Seja Filiado</h3>
+                    <p class="text-gray-600">Associe-se ao SINMEVAÇO e tenha acesso a todos os benefícios exclusivos para médicos.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-verde-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold">2</div>
+                    <h3 class="font-bold text-xl text-gray-800 mb-3">Cadastre-se</h3>
+                    <p class="text-gray-600">Solicite suas credenciais de acesso entrando em contato com nossa secretaria.</p>
+                </div>
+
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-verde-600 rounded-full flex items-center justify-center mx-auto mb-6 text-white text-3xl font-bold">3</div>
+                    <h3 class="font-bold text-xl text-gray-800 mb-3">Acesse</h3>
+                    <p class="text-gray-600">Utilize sua conta para acessar todo o acervo 24 horas por dia, 7 dias por semana.</p>
+                </div>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="https://wa.me/5531995074027?text=Olá! Quero solicitar acesso à Biblioteca Virtual" class="inline-flex items-center gap-2 bg-verde-600 text-white px-8 py-4 rounded-full font-bold hover:bg-verde-700 transition-colors">
+                    <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    Solicitar Acesso Agora
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-verde-700">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Ainda não é filiado ao SINMEVAÇO?</h2>
+            <p class="text-verde-100 text-lg mb-8 max-w-2xl mx-auto">
+                Além da Biblioteca Virtual, você terá acesso a assessoria jurídica, negociação salarial, apoio psicológico e muito mais.
+            </p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <a href="https://wa.me/5531995074027?text=Olá! Quero me filiar ao SINMEVAÇO" class="bg-white text-verde-700 px-8 py-4 rounded-full font-bold hover:bg-verde-50 transition-all flex items-center gap-2">
+                    <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
+                    Quero me Filiar
+                </a>
+                <a href="tel:+5531995074027" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold hover:bg-white hover:text-verde-700 transition-all">
+                    (31) 99507-4027
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="./LOGO SINMEVAÇO.jpeg" alt="SINMEVAÇO" class="h-12 rounded-lg mb-4">
+                    <p class="text-gray-400 text-sm">
+                        Sindicato dos Médicos do Vale do Aço. Há mais de 30 anos defendendo a classe médica.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="./index.html" class="hover:text-white">Início</a></li>
+                        <li><a href="./noticias.html" class="hover:text-white">Notícias</a></li>
+                        <li><a href="./blog.html" class="hover:text-white">Blog</a></li>
+                        <li><a href="./biblioteca.html" class="hover:text-white">Biblioteca Virtual</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Serviços</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="./servicos/defesa-juridica.html" class="hover:text-white">Defesa Jurídica</a></li>
+                        <li><a href="./servicos/negociacao-salarial.html" class="hover:text-white">Negociação Salarial</a></li>
+                        <li><a href="./servicos/apoio-medico.html" class="hover:text-white">Apoio ao Médico</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Coronel Fabriciano, MG</li>
+                        <li>(31) 99507-4027</li>
+                        <li>contato@sinmevaco.com.br</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>&copy; 2024 SINMEVAÇO - Sindicato dos Médicos do Vale do Aço. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
