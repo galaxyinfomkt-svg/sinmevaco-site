@@ -1,0 +1,96 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap');
+    </style>
+    <linearGradient id="bgGreen4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B7A4A"/>
+      <stop offset="100%" style="stop-color:#145C38"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo verde -->
+  <rect width="1080" height="1080" fill="url(#bgGreen4)"/>
+
+  <!-- LOGO SINMEVACO (vetorizada) -->
+  <g transform="translate(52, 38) scale(0.9)">
+    <circle cx="55" cy="55" r="55" fill="#ffffff"/>
+    <circle cx="55" cy="55" r="48" fill="none" stroke="#1B7A4A" stroke-width="5"/>
+    <path d="M18 80 L18 30 L33 55 L33 30" fill="none" stroke="#1B7A4A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="55" y1="15" x2="55" y2="95" stroke="#1B7A4A" stroke-width="5"/>
+    <circle cx="55" cy="18" r="6" fill="#1B7A4A"/>
+    <path d="M43 32 C43 32 55 42 67 32" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M67 50 C67 50 55 40 43 50" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M43 68 C43 68 55 78 67 68" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M77 30 L92 80 L107 30" fill="none" stroke="#1B7A4A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Numero da pagina -->
+  <text x="980" y="78" font-family="Quicksand, sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="end">
+    <tspan fill="#90EE90">04</tspan> / 06
+  </text>
+
+  <!-- Badge EM PAUTA -->
+  <rect x="52" y="170" width="200" height="48" rx="24" fill="#1B7A4A" stroke="#90EE90" stroke-width="2"/>
+  <text x="152" y="202" font-family="Quicksand, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="2">O QUE EXIGE</text>
+
+  <!-- Titulo -->
+  <text x="52" y="300" font-family="Quicksand, sans-serif" font-size="52" font-weight="700" fill="#90EE90">
+    O que a Resolução
+  </text>
+  <text x="52" y="370" font-family="Quicksand, sans-serif" font-size="52" font-weight="700" fill="#ffffff">
+    determina?
+  </text>
+
+  <!-- Card 1 -->
+  <g transform="translate(52, 420)">
+    <rect width="976" height="120" rx="18" fill="#ffffff" fill-opacity="0.1"/>
+    <circle cx="70" cy="60" r="35" fill="#90EE90"/>
+    <text x="70" y="72" font-family="Quicksand, sans-serif" font-size="36" font-weight="700" fill="#1B7A4A" text-anchor="middle">1</text>
+    <text x="140" y="50" font-family="Quicksand, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Controle de acesso</text>
+    <text x="140" y="85" font-family="Quicksand, sans-serif" font-size="22" font-weight="500" fill="#ffffff" fill-opacity="0.8">às unidades de saúde</text>
+  </g>
+
+  <!-- Card 2 -->
+  <g transform="translate(52, 560)">
+    <rect width="976" height="120" rx="18" fill="#ffffff" fill-opacity="0.1"/>
+    <circle cx="70" cy="60" r="35" fill="#90EE90"/>
+    <text x="70" y="72" font-family="Quicksand, sans-serif" font-size="36" font-weight="700" fill="#1B7A4A" text-anchor="middle">2</text>
+    <text x="140" y="50" font-family="Quicksand, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Vigilância presencial e contínua</text>
+    <text x="140" y="85" font-family="Quicksand, sans-serif" font-size="22" font-weight="500" fill="#ffffff" fill-opacity="0.8">Não apenas segurança patrimonial</text>
+  </g>
+
+  <!-- Card 3 -->
+  <g transform="translate(52, 700)">
+    <rect width="976" height="120" rx="18" fill="#ffffff" fill-opacity="0.1"/>
+    <circle cx="70" cy="60" r="35" fill="#90EE90"/>
+    <text x="70" y="72" font-family="Quicksand, sans-serif" font-size="36" font-weight="700" fill="#1B7A4A" text-anchor="middle">3</text>
+    <text x="140" y="50" font-family="Quicksand, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Videomonitoramento</text>
+    <text x="140" y="85" font-family="Quicksand, sans-serif" font-size="22" font-weight="500" fill="#ffffff" fill-opacity="0.8">em áreas comuns das unidades</text>
+  </g>
+
+  <!-- Card 4 -->
+  <g transform="translate(52, 840)">
+    <rect width="976" height="120" rx="18" fill="#ffffff" fill-opacity="0.1"/>
+    <circle cx="70" cy="60" r="35" fill="#90EE90"/>
+    <text x="70" y="72" font-family="Quicksand, sans-serif" font-size="36" font-weight="700" fill="#1B7A4A" text-anchor="middle">4</text>
+    <text x="140" y="50" font-family="Quicksand, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Protocolos de resposta</text>
+    <text x="140" y="85" font-family="Quicksand, sans-serif" font-size="22" font-weight="500" fill="#ffffff" fill-opacity="0.8">Ações imediatas em casos de agressão</text>
+  </g>
+
+  <!-- Linha separadora inferior -->
+  <line x1="52" y1="1000" x2="1028" y2="1000" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Indicadores de pagina -->
+  <g transform="translate(52, 1030)">
+    <circle cx="5" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <circle cx="25" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <circle cx="45" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <rect x="60" y="0" width="40" height="10" rx="5" fill="#90EE90"/>
+    <circle cx="120" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <circle cx="140" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+  </g>
+
+  <!-- SINMEVACO footer -->
+  <text x="1028" y="1045" font-family="Quicksand, sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">SINMEVAÇO</text>
+</svg>

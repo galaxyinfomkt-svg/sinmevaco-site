@@ -1,0 +1,122 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Barra verde superior -->
+  <rect width="1080" height="12" fill="#1B7A4A"/>
+
+  <!-- Fundo claro -->
+  <rect y="12" width="1080" height="1068" fill="#F5F7F5"/>
+
+  <!-- LOGO SINMEVACO (vetorizada) -->
+  <g transform="translate(52, 42) scale(0.77)">
+    <circle cx="55" cy="55" r="55" fill="#ffffff"/>
+    <circle cx="55" cy="55" r="48" fill="none" stroke="#1B7A4A" stroke-width="5"/>
+    <path d="M18 80 L18 30 L33 55 L33 30" fill="none" stroke="#1B7A4A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="55" y1="15" x2="55" y2="95" stroke="#1B7A4A" stroke-width="5"/>
+    <circle cx="55" cy="18" r="6" fill="#1B7A4A"/>
+    <path d="M43 32 C43 32 55 42 67 32" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M67 50 C67 50 55 40 43 50" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M43 68 C43 68 55 78 67 68" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M77 30 L92 80 L107 30" fill="none" stroke="#1B7A4A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Numero da pagina -->
+  <text x="980" y="78" font-family="Quicksand, sans-serif" font-size="24" font-weight="700" fill="#1B7A4A" text-anchor="end">
+    <tspan fill="#E53935">02</tspan> / 06
+  </text>
+
+  <!-- Badge O PROBLEMA -->
+  <rect x="52" y="155" width="220" height="48" rx="24" fill="#E53935"/>
+  <text x="162" y="187" font-family="Quicksand, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="2">O PROBLEMA</text>
+
+  <!-- Titulo -->
+  <text x="52" y="280" font-family="Quicksand, sans-serif" font-size="56" font-weight="700" fill="#2D2D2D">
+    Por que isso é
+  </text>
+  <text x="52" y="355" font-family="Quicksand, sans-serif" font-size="56" font-weight="700" fill="#E53935">
+    alarmante?
+  </text>
+
+  <!-- Linha lateral verde + texto intro -->
+  <rect x="52" y="395" width="5" height="75" rx="2" fill="#1B7A4A"/>
+  <text x="78" y="425" font-family="Quicksand, sans-serif" font-size="24" font-weight="500" fill="#666666">
+    A violência contra médicos não é um problema isolado.
+  </text>
+  <text x="78" y="458" font-family="Quicksand, sans-serif" font-size="24" font-weight="500" fill="#666666">
+    É uma crise que afeta toda a categoria.
+  </text>
+
+  <!-- Card 1: 117% -->
+  <g transform="translate(52, 510)">
+    <rect width="976" height="150" rx="20" fill="#ffffff" stroke="#E8E8E8" stroke-width="1"/>
+    <rect width="8" height="150" rx="4" fill="#E53935"/>
+    <!-- Icone triangulo alerta -->
+    <g transform="translate(45, 38)">
+      <circle cx="38" cy="38" r="38" fill="#FFEBEE"/>
+      <polygon points="38,15 60,60 16,60" fill="#E53935"/>
+      <text x="38" y="54" font-family="Quicksand, sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">!</text>
+    </g>
+    <!-- Texto -->
+    <text x="150" y="70" font-family="Quicksand, sans-serif" font-size="58" font-weight="700" fill="#E53935">117%</text>
+    <text x="340" y="70" font-family="Quicksand, sans-serif" font-size="36" font-weight="600" fill="#2D2D2D">de aumento</text>
+    <text x="150" y="118" font-family="Quicksand, sans-serif" font-size="24" font-weight="500" fill="#888888">Agressões cresceram nos últimos 5 anos</text>
+  </g>
+
+  <!-- Card 2: 64% -->
+  <g transform="translate(52, 680)">
+    <rect width="976" height="150" rx="20" fill="#ffffff" stroke="#E8E8E8" stroke-width="1"/>
+    <rect width="8" height="150" rx="4" fill="#FFA726"/>
+    <!-- Icone triangulo alerta -->
+    <g transform="translate(45, 38)">
+      <circle cx="38" cy="38" r="38" fill="#FFF3E0"/>
+      <polygon points="38,15 60,60 16,60" fill="#FFA726"/>
+      <text x="38" y="54" font-family="Quicksand, sans-serif" font-size="26" font-weight="700" fill="#ffffff" text-anchor="middle">!</text>
+    </g>
+    <!-- Texto -->
+    <text x="150" y="70" font-family="Quicksand, sans-serif" font-size="58" font-weight="700" fill="#FFA726">64%</text>
+    <text x="300" y="70" font-family="Quicksand, sans-serif" font-size="36" font-weight="600" fill="#2D2D2D">dos médicos</text>
+    <text x="150" y="118" font-family="Quicksand, sans-serif" font-size="24" font-weight="500" fill="#888888">Já sofreram violência no ambiente de trabalho</text>
+  </g>
+
+  <!-- Box verde: Principais ocorrencias -->
+  <g transform="translate(52, 860)">
+    <rect width="976" height="120" rx="20" fill="#1B7A4A"/>
+
+    <text x="488" y="35" font-family="Quicksand, sans-serif" font-size="18" font-weight="600" fill="#90EE90" text-anchor="middle" letter-spacing="3">
+      AS PRINCIPAIS OCORRÊNCIAS:
+    </text>
+
+    <!-- Tags -->
+    <rect x="40" y="55" width="200" height="48" rx="24" fill="#ffffff" fill-opacity="0.15"/>
+    <text x="140" y="87" font-family="Quicksand, sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle">Ameaças</text>
+
+    <rect x="260" y="55" width="250" height="48" rx="24" fill="#ffffff" fill-opacity="0.15"/>
+    <text x="385" y="87" font-family="Quicksand, sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle">Agressões Físicas</text>
+
+    <rect x="530" y="55" width="200" height="48" rx="24" fill="#ffffff" fill-opacity="0.15"/>
+    <text x="630" y="87" font-family="Quicksand, sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle">Destruição</text>
+
+    <rect x="750" y="55" width="180" height="48" rx="24" fill="#ffffff" fill-opacity="0.15"/>
+    <text x="840" y="87" font-family="Quicksand, sans-serif" font-size="20" font-weight="600" fill="#ffffff" text-anchor="middle">Coerção</text>
+  </g>
+
+  <!-- Linha separadora inferior -->
+  <line x1="52" y1="1015" x2="1028" y2="1015" stroke="#E0E0E0" stroke-width="1"/>
+
+  <!-- Indicadores de pagina -->
+  <g transform="translate(52, 1040)">
+    <circle cx="5" cy="5" r="5" fill="#1B7A4A" fill-opacity="0.3"/>
+    <rect x="20" y="0" width="40" height="10" rx="5" fill="#E53935"/>
+    <circle cx="80" cy="5" r="5" fill="#1B7A4A" fill-opacity="0.3"/>
+    <circle cx="100" cy="5" r="5" fill="#1B7A4A" fill-opacity="0.3"/>
+    <circle cx="120" cy="5" r="5" fill="#1B7A4A" fill-opacity="0.3"/>
+    <circle cx="140" cy="5" r="5" fill="#1B7A4A" fill-opacity="0.3"/>
+  </g>
+
+  <!-- SINMEVACO footer -->
+  <text x="1028" y="1055" font-family="Quicksand, sans-serif" font-size="18" font-weight="700" fill="#1B7A4A" text-anchor="end">SINMEVAÇO</text>
+</svg>

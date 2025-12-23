@@ -1,0 +1,104 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Barra verde superior -->
+  <rect width="1080" height="12" fill="#1B7A4A"/>
+
+  <!-- Fundo claro -->
+  <rect y="12" width="1080" height="1068" fill="#F5F7F5"/>
+
+  <!-- Elemento decorativo diagonal -->
+  <path d="M700 12 L1080 12 L1080 400 Z" fill="#1B7A4A" fill-opacity="0.08"/>
+
+  <!-- LOGO SINMEVACO (vetorizada) -->
+  <g transform="translate(52, 42) scale(0.77)">
+    <circle cx="55" cy="55" r="55" fill="#ffffff"/>
+    <circle cx="55" cy="55" r="48" fill="none" stroke="#1B7A4A" stroke-width="5"/>
+    <path d="M18 80 L18 30 L33 55 L33 30" fill="none" stroke="#1B7A4A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="55" y1="15" x2="55" y2="95" stroke="#1B7A4A" stroke-width="5"/>
+    <circle cx="55" cy="18" r="6" fill="#1B7A4A"/>
+    <path d="M43 32 C43 32 55 42 67 32" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M67 50 C67 50 55 40 43 50" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M43 68 C43 68 55 78 67 68" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M77 30 L92 80 L107 30" fill="none" stroke="#1B7A4A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Numero da pagina -->
+  <text x="980" y="78" font-family="Quicksand, sans-serif" font-size="24" font-weight="700" fill="#1B7A4A" text-anchor="end">
+    <tspan fill="#1B7A4A">05</tspan> / 06
+  </text>
+
+  <!-- Badge PROTEÇÃO -->
+  <rect x="52" y="155" width="200" height="48" rx="24" fill="#1B7A4A"/>
+  <text x="152" y="187" font-family="Quicksand, sans-serif" font-size="16" font-weight="700" fill="#ffffff" text-anchor="middle" letter-spacing="2">PROTEÇÃO</text>
+
+  <!-- Titulo -->
+  <text x="52" y="280" font-family="Quicksand, sans-serif" font-size="52" font-weight="700" fill="#2D2D2D">
+    Proteção ao
+  </text>
+  <text x="52" y="350" font-family="Quicksand, sans-serif" font-size="52" font-weight="700" fill="#1B7A4A">
+    Médico Vítima
+  </text>
+
+  <!-- Card 1 - Verde (destaque) -->
+  <g transform="translate(52, 400)">
+    <rect width="976" height="110" rx="18" fill="#1B7A4A"/>
+    <circle cx="70" cy="55" r="32" fill="#ffffff" fill-opacity="0.2"/>
+    <!-- Icone check -->
+    <path d="M55 55 L65 65 L85 45" stroke="#ffffff" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="130" y="45" font-family="Quicksand, sans-serif" font-size="26" font-weight="700" fill="#ffffff">Protocolos imediatos</text>
+    <text x="130" y="78" font-family="Quicksand, sans-serif" font-size="20" font-weight="500" fill="#ffffff" fill-opacity="0.9">de resposta a agressões</text>
+  </g>
+
+  <!-- Card 2 -->
+  <g transform="translate(52, 530)">
+    <rect width="976" height="110" rx="18" fill="#ffffff" stroke="#E8E8E8" stroke-width="1"/>
+    <circle cx="70" cy="55" r="32" fill="#1B7A4A"/>
+    <!-- Icone coração/suporte -->
+    <path d="M70 45 L60 55 L70 75 L80 55 Z" fill="#ffffff"/>
+    <text x="130" y="45" font-family="Quicksand, sans-serif" font-size="26" font-weight="700" fill="#2D2D2D">Suporte psicológico e jurídico</text>
+    <text x="130" y="78" font-family="Quicksand, sans-serif" font-size="20" font-weight="500" fill="#888888">ao médico vítima</text>
+  </g>
+
+  <!-- Card 3 -->
+  <g transform="translate(52, 660)">
+    <rect width="976" height="110" rx="18" fill="#ffffff" stroke="#E8E8E8" stroke-width="1"/>
+    <circle cx="70" cy="55" r="32" fill="#1B7A4A"/>
+    <!-- Icone documento -->
+    <rect x="58" y="40" width="24" height="30" rx="3" fill="#ffffff"/>
+    <line x1="62" y1="50" x2="78" y2="50" stroke="#1B7A4A" stroke-width="2"/>
+    <line x1="62" y1="58" x2="74" y2="58" stroke="#1B7A4A" stroke-width="2"/>
+    <text x="130" y="45" font-family="Quicksand, sans-serif" font-size="26" font-weight="700" fill="#2D2D2D">Notificação obrigatória</text>
+    <text x="130" y="78" font-family="Quicksand, sans-serif" font-size="20" font-weight="500" fill="#888888">ao CRM e às autoridades quando houver violência</text>
+  </g>
+
+  <!-- Card 4 -->
+  <g transform="translate(52, 790)">
+    <rect width="976" height="110" rx="18" fill="#ffffff" stroke="#E8E8E8" stroke-width="1"/>
+    <circle cx="70" cy="55" r="32" fill="#1B7A4A"/>
+    <!-- Icone seta/remanejamento -->
+    <path d="M60 55 L80 55 M72 47 L80 55 L72 63" stroke="#ffffff" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <text x="130" y="45" font-family="Quicksand, sans-serif" font-size="26" font-weight="700" fill="#2D2D2D">Possibilidade de remanejamento</text>
+    <text x="130" y="78" font-family="Quicksand, sans-serif" font-size="20" font-weight="500" fill="#888888">do médico de setor após agressão</text>
+  </g>
+
+  <!-- Linha separadora inferior -->
+  <line x1="52" y1="940" x2="1028" y2="940" stroke="#E0E0E0" stroke-width="1"/>
+
+  <!-- Indicadores de pagina -->
+  <g transform="translate(52, 970)">
+    <circle cx="5" cy="5" r="5" fill="#1B7A4A" fill-opacity="0.3"/>
+    <circle cx="25" cy="5" r="5" fill="#1B7A4A" fill-opacity="0.3"/>
+    <circle cx="45" cy="5" r="5" fill="#1B7A4A" fill-opacity="0.3"/>
+    <circle cx="65" cy="5" r="5" fill="#1B7A4A" fill-opacity="0.3"/>
+    <rect x="80" y="0" width="40" height="10" rx="5" fill="#1B7A4A"/>
+    <circle cx="140" cy="5" r="5" fill="#1B7A4A" fill-opacity="0.3"/>
+  </g>
+
+  <!-- SINMEVACO footer -->
+  <text x="1028" y="985" font-family="Quicksand, sans-serif" font-size="18" font-weight="700" fill="#1B7A4A" text-anchor="end">SINMEVAÇO</text>
+</svg>

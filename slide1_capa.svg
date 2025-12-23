@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0d4a3a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#1a6b52;stop-opacity:1" />
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="4" stdDeviation="8" flood-color="#000000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bgGradient)"/>
+
+  <!-- Decorative elements -->
+  <circle cx="900" cy="150" r="200" fill="#ffffff" opacity="0.05"/>
+  <circle cx="100" cy="900" r="150" fill="#ffffff" opacity="0.05"/>
+
+  <!-- Diagonal accent line -->
+  <line x1="0" y1="750" x2="1080" y2="550" stroke="#2ecc71" stroke-width="3" opacity="0.6"/>
+  <line x1="0" y1="780" x2="1080" y2="580" stroke="#2ecc71" stroke-width="1" opacity="0.4"/>
+
+  <!-- Logo area (circle placeholder for logo) -->
+  <circle cx="540" cy="200" r="100" fill="#ffffff" filter="url(#shadow)"/>
+
+  <!-- Logo MSV symbol -->
+  <text x="540" y="185" font-family="Arial, sans-serif" font-size="50" font-weight="bold" fill="#0d4a3a" text-anchor="middle">M$V</text>
+  <text x="540" y="230" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#0d4a3a" text-anchor="middle">SINMEVAÇO</text>
+
+  <!-- Main title -->
+  <text x="540" y="420" font-family="Arial Black, sans-serif" font-size="72" font-weight="900" fill="#ffffff" text-anchor="middle" filter="url(#shadow)">AGRESSÃO AOS</text>
+  <text x="540" y="510" font-family="Arial Black, sans-serif" font-size="72" font-weight="900" fill="#ffffff" text-anchor="middle" filter="url(#shadow)">MÉDICOS</text>
+
+  <!-- Highlight box -->
+  <rect x="140" y="560" width="800" height="120" fill="#2ecc71" rx="10"/>
+  <text x="540" y="640" font-family="Arial Black, sans-serif" font-size="68" font-weight="900" fill="#ffffff" text-anchor="middle">VAI TER RESPOSTA!</text>
+
+  <!-- Subtitle -->
+  <text x="540" y="780" font-family="Arial, sans-serif" font-size="32" fill="#ffffff" text-anchor="middle" opacity="0.9">Resolução CFM nº 2.444/2025</text>
+
+  <!-- Call to action -->
+  <text x="540" y="850" font-family="Arial, sans-serif" font-size="24" fill="#2ecc71" text-anchor="middle">Deslize para saber mais →</text>
+
+  <!-- Slide indicator -->
+  <rect x="490" y="970" width="30" height="8" rx="4" fill="#2ecc71"/>
+  <rect x="530" y="970" width="12" height="8" rx="4" fill="#ffffff" opacity="0.4"/>
+  <rect x="550" y="970" width="12" height="8" rx="4" fill="#ffffff" opacity="0.4"/>
+  <rect x="570" y="970" width="12" height="8" rx="4" fill="#ffffff" opacity="0.4"/>
+  <rect x="590" y="970" width="12" height="8" rx="4" fill="#ffffff" opacity="0.4"/>
+
+  <!-- Page number -->
+  <circle cx="980" cy="100" r="40" fill="#ffffff" opacity="0.2"/>
+  <text x="980" y="110" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">1/6</text>
+</svg>

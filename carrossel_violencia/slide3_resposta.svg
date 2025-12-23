@@ -1,0 +1,92 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap');
+    </style>
+    <linearGradient id="bgGreen3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B7A4A"/>
+      <stop offset="100%" style="stop-color:#145C38"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo verde -->
+  <rect width="1080" height="1080" fill="url(#bgGreen3)"/>
+
+  <!-- Circulos decorativos -->
+  <circle cx="540" cy="540" r="400" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+  <circle cx="540" cy="540" r="300" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+
+  <!-- LOGO SINMEVACO (vetorizada) -->
+  <g transform="translate(52, 38) scale(0.9)">
+    <circle cx="55" cy="55" r="55" fill="#ffffff"/>
+    <circle cx="55" cy="55" r="48" fill="none" stroke="#1B7A4A" stroke-width="5"/>
+    <path d="M18 80 L18 30 L33 55 L33 30" fill="none" stroke="#1B7A4A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="55" y1="15" x2="55" y2="95" stroke="#1B7A4A" stroke-width="5"/>
+    <circle cx="55" cy="18" r="6" fill="#1B7A4A"/>
+    <path d="M43 32 C43 32 55 42 67 32" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M67 50 C67 50 55 40 43 50" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M43 68 C43 68 55 78 67 68" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M77 30 L92 80 L107 30" fill="none" stroke="#1B7A4A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Numero da pagina -->
+  <text x="980" y="78" font-family="Quicksand, sans-serif" font-size="24" font-weight="700" fill="#ffffff" text-anchor="end">
+    <tspan fill="#90EE90">03</tspan> / 06
+  </text>
+
+  <!-- Badge A RESPOSTA -->
+  <rect x="52" y="170" width="240" height="48" rx="24" fill="#90EE90"/>
+  <text x="172" y="202" font-family="Quicksand, sans-serif" font-size="16" font-weight="700" fill="#1B7A4A" text-anchor="middle" letter-spacing="2">A RESPOSTA</text>
+
+  <!-- Titulo -->
+  <text x="52" y="300" font-family="Quicksand, sans-serif" font-size="56" font-weight="700" fill="#ffffff">
+    O CFM aprovou a
+  </text>
+
+  <!-- Box destaque Resolucao -->
+  <rect x="52" y="330" width="750" height="90" rx="15" fill="#90EE90"/>
+  <text x="427" y="395" font-family="Quicksand, sans-serif" font-size="58" font-weight="700" fill="#1B7A4A" text-anchor="middle">
+    Resolução 2.444/2025
+  </text>
+
+  <!-- Texto explicativo -->
+  <text x="540" y="500" font-family="Quicksand, sans-serif" font-size="30" font-weight="500" fill="#ffffff" text-anchor="middle">
+    que obriga todas as unidades de saúde,
+  </text>
+  <text x="540" y="545" font-family="Quicksand, sans-serif" font-size="30" font-weight="500" fill="#ffffff" text-anchor="middle">
+    públicas e privadas, a garantir
+  </text>
+  <text x="540" y="600" font-family="Quicksand, sans-serif" font-size="32" font-weight="700" fill="#90EE90" text-anchor="middle">
+    segurança integral ao médico
+  </text>
+  <text x="540" y="650" font-family="Quicksand, sans-serif" font-size="30" font-weight="500" fill="#ffffff" text-anchor="middle">
+    no exercício da profissão.
+  </text>
+
+  <!-- Box NÃO É SUGESTÃO -->
+  <g transform="translate(140, 720)">
+    <rect width="800" height="180" rx="20" fill="#0D5C3A" stroke="#90EE90" stroke-width="3"/>
+    <text x="400" y="75" font-family="Quicksand, sans-serif" font-size="48" font-weight="700" fill="#FFA726" text-anchor="middle">
+      NÃO É SUGESTÃO.
+    </text>
+    <text x="400" y="140" font-family="Quicksand, sans-serif" font-size="48" font-weight="700" fill="#90EE90" text-anchor="middle">
+      É NORMA.
+    </text>
+  </g>
+
+  <!-- Linha separadora inferior -->
+  <line x1="52" y1="1000" x2="1028" y2="1000" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Indicadores de pagina -->
+  <g transform="translate(52, 1030)">
+    <circle cx="5" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <circle cx="25" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <rect x="40" y="0" width="40" height="10" rx="5" fill="#90EE90"/>
+    <circle cx="100" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <circle cx="120" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <circle cx="140" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+  </g>
+
+  <!-- SINMEVACO footer -->
+  <text x="1028" y="1045" font-family="Quicksand, sans-serif" font-size="18" font-weight="700" fill="#ffffff" text-anchor="end">SINMEVAÇO</text>
+</svg>

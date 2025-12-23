@@ -1,0 +1,98 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap');
+    </style>
+    <linearGradient id="bgGreen6" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1B7A4A"/>
+      <stop offset="100%" style="stop-color:#145C38"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fundo verde -->
+  <rect width="1080" height="1080" fill="url(#bgGreen6)"/>
+
+  <!-- Circulos decorativos -->
+  <circle cx="540" cy="450" r="350" fill="none" stroke="#ffffff" stroke-opacity="0.05" stroke-width="1"/>
+  <circle cx="540" cy="450" r="250" fill="none" stroke="#ffffff" stroke-opacity="0.03" stroke-width="1"/>
+
+  <!-- LOGO SINMEVACO (centralizado maior - vetorizada) -->
+  <g transform="translate(440, 80) scale(1.8)">
+    <circle cx="55" cy="55" r="55" fill="#ffffff"/>
+    <circle cx="55" cy="55" r="48" fill="none" stroke="#1B7A4A" stroke-width="5"/>
+    <path d="M18 80 L18 30 L33 55 L33 30" fill="none" stroke="#1B7A4A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+    <line x1="55" y1="15" x2="55" y2="95" stroke="#1B7A4A" stroke-width="5"/>
+    <circle cx="55" cy="18" r="6" fill="#1B7A4A"/>
+    <path d="M43 32 C43 32 55 42 67 32" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M67 50 C67 50 55 40 43 50" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M43 68 C43 68 55 78 67 68" fill="none" stroke="#1B7A4A" stroke-width="4" stroke-linecap="round"/>
+    <path d="M77 30 L92 80 L107 30" fill="none" stroke="#1B7A4A" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Icone check em circulo -->
+  <g transform="translate(490, 310)">
+    <circle cx="50" cy="50" r="45" fill="#90EE90" fill-opacity="0.3"/>
+    <circle cx="50" cy="50" r="35" fill="#90EE90"/>
+    <path d="M35 50 L45 60 L65 40" stroke="#1B7A4A" stroke-width="5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Titulo principal -->
+  <text x="540" y="470" font-family="Quicksand, sans-serif" font-size="62" font-weight="700" fill="#ffffff" text-anchor="middle">
+    Nenhum Médico
+  </text>
+  <text x="540" y="550" font-family="Quicksand, sans-serif" font-size="62" font-weight="700" fill="#ffffff" text-anchor="middle">
+    Pode Trabalhar
+  </text>
+  <text x="540" y="630" font-family="Quicksand, sans-serif" font-size="62" font-weight="700" fill="#90EE90" text-anchor="middle">
+    com Medo!
+  </text>
+
+  <!-- Subtexto -->
+  <text x="540" y="710" font-family="Quicksand, sans-serif" font-size="26" font-weight="500" fill="#ffffff" fill-opacity="0.9" text-anchor="middle">
+    A Resolução 2.444 é um marco e nós
+  </text>
+  <text x="540" y="750" font-family="Quicksand, sans-serif" font-size="26" font-weight="700" fill="#90EE90" text-anchor="middle">
+    vamos cobrar seu cumprimento.
+  </text>
+
+  <!-- Box contato -->
+  <g transform="translate(240, 800)">
+    <rect width="600" height="60" rx="30" fill="#ffffff" fill-opacity="0.15" stroke="#ffffff" stroke-opacity="0.3" stroke-width="1"/>
+    <!-- Icone WhatsApp -->
+    <circle cx="50" cy="30" r="20" fill="#25D366"/>
+    <text x="50" y="38" font-family="Quicksand, sans-serif" font-size="20" font-weight="700" fill="#ffffff" text-anchor="middle">W</text>
+    <text x="320" y="40" font-family="Quicksand, sans-serif" font-size="24" font-weight="600" fill="#ffffff" text-anchor="middle">
+      (31) 99717-8316
+    </text>
+  </g>
+
+  <!-- Hashtags -->
+  <g transform="translate(180, 900)">
+    <rect x="0" y="0" width="220" height="40" rx="20" fill="#ffffff" fill-opacity="0.1"/>
+    <text x="110" y="28" font-family="Quicksand, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">#UniãoFazAForça</text>
+
+    <rect x="240" y="0" width="260" height="40" rx="20" fill="#ffffff" fill-opacity="0.1"/>
+    <text x="370" y="28" font-family="Quicksand, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">#MedicinaValeDoAço</text>
+
+    <rect x="520" y="0" width="220" height="40" rx="20" fill="#ffffff" fill-opacity="0.1"/>
+    <text x="630" y="28" font-family="Quicksand, sans-serif" font-size="16" font-weight="600" fill="#ffffff" text-anchor="middle">#SindicatoForte</text>
+  </g>
+
+  <!-- Linha separadora inferior -->
+  <line x1="52" y1="1000" x2="1028" y2="1000" stroke="#ffffff" stroke-opacity="0.2" stroke-width="1"/>
+
+  <!-- Texto rodape -->
+  <text x="52" y="1040" font-family="Quicksand, sans-serif" font-size="16" font-weight="500" fill="#ffffff" fill-opacity="0.7">
+    Sindicato dos Médicos do Vale do Aço
+  </text>
+
+  <!-- Indicadores de pagina -->
+  <g transform="translate(870, 1030)">
+    <circle cx="5" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <circle cx="25" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <circle cx="45" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <circle cx="65" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <circle cx="85" cy="5" r="5" fill="#ffffff" fill-opacity="0.3"/>
+    <rect x="100" y="0" width="40" height="10" rx="5" fill="#ffffff"/>
+  </g>
+</svg>
