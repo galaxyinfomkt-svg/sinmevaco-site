@@ -1,0 +1,1042 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - SINMEVAÇO | Artigos e Informações para Médicos</title>
+    <meta name="description" content="Blog do SINMEVAÇO com artigos sobre direitos médicos, saúde, carreira e bem-estar profissional.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'verde': {
+                            50: '#f0fdf4', 100: '#dcfce7', 200: '#bbf7d0', 300: '#86efac',
+                            400: '#4ade80', 500: '#22c55e', 600: '#16a34a', 700: '#15803d',
+                            800: '#166534', 900: '#14532d'
+                        }
+                    },
+                    fontFamily: {
+                        'sans': ['Inter', 'system-ui', 'sans-serif'],
+                        'serif': ['Playfair Display', 'serif']
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        .line-clamp-2 { display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+        .line-clamp-3 { display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+        .blog-card { transition: all 0.3s ease; }
+        .blog-card:hover { transform: translateY(-6px); box-shadow: 0 25px 50px rgba(0,0,0,0.1); }
+        .category-tag { transition: all 0.2s ease; }
+        .category-tag:hover { transform: scale(1.05); }
+    </style>
+</head>
+<body class="font-sans bg-gray-50">
+
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="flex items-center justify-between h-20">
+                <a href="./index.html" class="flex items-center gap-3">
+                    <img src="./LOGO SINMEVAÇO.jpeg" alt="SINMEVAÇO" class="h-12 rounded-lg">
+                    <div>
+                        <span class="font-extrabold text-verde-800 text-xl tracking-tight">SIN<span class="text-verde-600">MEVAÇO</span></span>
+                        <span class="text-gray-300 mx-2">|</span>
+                        <span class="text-gray-600 font-medium">Blog</span>
+                    </div>
+                </a>
+
+                <nav class="hidden lg:flex items-center gap-6">
+                    <a href="./index.html" class="text-gray-600 hover:text-verde-600 font-medium">Início</a>
+                    <a href="./noticias.html" class="text-gray-600 hover:text-verde-600 font-medium">Notícias</a>
+                    <a href="./blog.html" class="text-verde-600 font-semibold">Blog</a>
+                    <a href="./revista-dezembro-2024.html" class="text-gray-600 hover:text-verde-600 font-medium">Revista</a>
+                    <a href="./index.html#contato" class="text-gray-600 hover:text-verde-600 font-medium">Contato</a>
+                </nav>
+
+                <div class="flex items-center gap-3">
+                    <a href="https://wa.me/5531997178316" class="hidden sm:flex items-center gap-2 bg-verde-600 text-white px-4 py-2 rounded-full font-semibold hover:bg-verde-700 transition-colors">
+                        <span>Filiar-se</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-br from-verde-800 via-verde-700 to-verde-600 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4">Blog SINMEVAÇO</h1>
+            <p class="text-verde-100 text-lg max-w-2xl mx-auto">
+                Artigos, orientações e informações essenciais para sua carreira médica.
+                Conteúdo produzido por especialistas para profissionais da saúde.
+            </p>
+            <div class="mt-8 flex flex-wrap justify-center gap-3">
+                <a href="#direitos" class="category-tag px-4 py-2 bg-white/20 rounded-full text-sm font-medium hover:bg-white/30">Direitos Médicos</a>
+                <a href="#carreira" class="category-tag px-4 py-2 bg-white/20 rounded-full text-sm font-medium hover:bg-white/30">Carreira</a>
+                <a href="#saude" class="category-tag px-4 py-2 bg-white/20 rounded-full text-sm font-medium hover:bg-white/30">Saúde do Médico</a>
+                <a href="#juridico" class="category-tag px-4 py-2 bg-white/20 rounded-full text-sm font-medium hover:bg-white/30">Jurídico</a>
+                <a href="#financeiro" class="category-tag px-4 py-2 bg-white/20 rounded-full text-sm font-medium hover:bg-white/30">Financeiro</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="max-w-7xl mx-auto px-4 py-12">
+
+        <!-- Featured Article -->
+        <section class="mb-16">
+            <article class="blog-card bg-white rounded-2xl overflow-hidden shadow-lg">
+                <div class="grid lg:grid-cols-2">
+                    <div class="relative h-64 lg:h-auto">
+                        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=800&q=80"
+                             alt="Artigo em Destaque" class="w-full h-full object-cover">
+                        <span class="absolute top-4 left-4 bg-verde-600 text-white px-3 py-1 rounded-full text-sm font-bold">DESTAQUE</span>
+                    </div>
+                    <div class="p-8 lg:p-12 flex flex-col justify-center">
+                        <span class="text-verde-600 text-sm font-semibold uppercase tracking-wider mb-2">Direitos Médicos</span>
+                        <h2 class="font-serif text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
+                            Guia Completo do Piso Salarial Médico: Tudo o que você precisa saber em 2025
+                        </h2>
+                        <p class="text-gray-600 mb-6 line-clamp-3">
+                            A Lei 14.434/2022 estabeleceu o piso salarial nacional para médicos. Neste guia completo, explicamos
+                            todos os aspectos da lei, como calcular seu piso, e o que fazer se seu empregador não está cumprindo.
+                        </p>
+                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-6">
+                            <span>📅 20 Dez 2024</span>
+                            <span>⏱️ 15 min de leitura</span>
+                            <span>👁️ 3.2k visualizações</span>
+                        </div>
+                        <a href="#" class="inline-flex items-center gap-2 text-verde-600 font-semibold hover:text-verde-700">
+                            Ler artigo completo
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </section>
+
+        <!-- Articles Grid - 50 articles -->
+        <section>
+            <div class="flex items-center justify-between mb-8">
+                <h2 class="text-2xl font-bold text-gray-800">Todos os Artigos</h2>
+                <select class="px-4 py-2 border border-gray-200 rounded-lg text-sm focus:outline-none focus:ring-2 focus:ring-verde-500">
+                    <option>Mais recentes</option>
+                    <option>Mais lidos</option>
+                    <option>Mais comentados</option>
+                </select>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+                <!-- Article 1 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white px-2 py-0.5 rounded text-xs font-bold">CARREIRA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Como montar uma clínica médica: do planejamento à inauguração
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Guia completo para médicos que desejam abrir seu próprio consultório ou clínica.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>18 Dez 2024</span>
+                            <span>12 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 2 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">JURÍDICO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Processo ético-profissional: como se defender perante o CRM
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Orientações sobre como proceder se você receber uma notificação do Conselho Regional de Medicina.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>17 Dez 2024</span>
+                            <span>10 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 3 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-red-600 text-white px-2 py-0.5 rounded text-xs font-bold">SAÚDE MENTAL</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Síndrome de Burnout: identificando os sinais antes que seja tarde
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Aprenda a reconhecer os primeiros sintomas de esgotamento profissional e como buscar ajuda.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>16 Dez 2024</span>
+                            <span>8 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 4 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-yellow-600 text-white px-2 py-0.5 rounded text-xs font-bold">FINANCEIRO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Planejamento financeiro para médicos: construindo patrimônio
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Estratégias de investimento e gestão financeira específicas para profissionais da medicina.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>15 Dez 2024</span>
+                            <span>11 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 5 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-purple-600 text-white px-2 py-0.5 rounded text-xs font-bold">TECNOLOGIA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Inteligência Artificial na Medicina: oportunidades e limites éticos
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Como a IA está transformando a prática médica e o que você precisa saber sobre regulamentação.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>14 Dez 2024</span>
+                            <span>9 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 6 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">DIREITOS</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Jornada de trabalho do médico: limites legais e negociação coletiva
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Entenda seus direitos quanto a horas trabalhadas, intervalos e plantões.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>13 Dez 2024</span>
+                            <span>7 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 7 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white px-2 py-0.5 rounded text-xs font-bold">CARREIRA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Residência médica: como escolher a especialidade certa para você
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Fatores a considerar na escolha da especialização e dicas para o processo seletivo.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>12 Dez 2024</span>
+                            <span>10 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 8 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">JURÍDICO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Responsabilidade civil do médico: como se proteger juridicamente
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Orientações sobre documentação, prontuário e termo de consentimento.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>11 Dez 2024</span>
+                            <span>13 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 9 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-red-600 text-white px-2 py-0.5 rounded text-xs font-bold">SAÚDE</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Qualidade de vida do médico: equilibrando trabalho e vida pessoal
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Estratégias práticas para manter sua saúde física e mental em dia.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>10 Dez 2024</span>
+                            <span>6 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 10 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-yellow-600 text-white px-2 py-0.5 rounded text-xs font-bold">FINANCEIRO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Imposto de Renda para médicos: guia de declaração 2025
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Deduções, livro-caixa e dicas para não cair na malha fina.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>09 Dez 2024</span>
+                            <span>14 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 11 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1666214280577-5765686e2c4f?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-purple-600 text-white px-2 py-0.5 rounded text-xs font-bold">TELEMEDICINA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Telemedicina: como implementar consultas online de forma segura
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Requisitos técnicos, legais e éticos para atendimento remoto.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>08 Dez 2024</span>
+                            <span>11 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 12 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">DIREITOS</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Férias do médico: como calcular e quando tirar
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Direitos trabalhistas sobre férias, inclusive para quem tem múltiplos vínculos.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>07 Dez 2024</span>
+                            <span>5 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 13 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white px-2 py-0.5 rounded text-xs font-bold">CARREIRA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Medicina no interior: oportunidades além das capitais
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Vantagens e desafios de trabalhar em cidades do interior do Brasil.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>06 Dez 2024</span>
+                            <span>8 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 14 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">SINDICAL</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Por que se filiar ao sindicato: benefícios da representação coletiva
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Entenda como o sindicato pode ajudar na sua carreira e na defesa dos seus direitos.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>05 Dez 2024</span>
+                            <span>6 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 15 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-red-600 text-white px-2 py-0.5 rounded text-xs font-bold">SAÚDE MENTAL</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Depressão entre médicos: quebrando o estigma
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Por que médicos têm dificuldade em buscar ajuda e como mudar esse cenário.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>04 Dez 2024</span>
+                            <span>9 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 16 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-yellow-600 text-white px-2 py-0.5 rounded text-xs font-bold">FINANCEIRO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            PJ ou CLT: qual regime é mais vantajoso para médicos?
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Análise completa das vantagens e desvantagens de cada modalidade de contratação.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>03 Dez 2024</span>
+                            <span>12 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 17 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1530497610245-94d3c16cda28?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">JURÍDICO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Prontuário médico: aspectos legais e boas práticas
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            O que documentar, por quanto tempo guardar e como evitar problemas.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>02 Dez 2024</span>
+                            <span>10 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 18 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white px-2 py-0.5 rounded text-xs font-bold">CARREIRA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Marketing médico: o que pode e o que não pode nas redes sociais
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Regras do CFM para publicidade médica na era digital.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>01 Dez 2024</span>
+                            <span>7 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 19 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">DIREITOS</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Adicional de insalubridade: quando o médico tem direito
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Critérios para receber o adicional e como calcular o valor.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>30 Nov 2024</span>
+                            <span>8 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 20 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1434494878577-86c23bcb06b9?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-red-600 text-white px-2 py-0.5 rounded text-xs font-bold">SAÚDE</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Sono e plantões noturnos: impactos na saúde do médico
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Evidências científicas e estratégias para minimizar os danos.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>29 Nov 2024</span>
+                            <span>11 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 21 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-yellow-600 text-white px-2 py-0.5 rounded text-xs font-bold">FINANCEIRO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Aposentadoria do médico: planejando o futuro desde agora
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            INSS, previdência privada e outras estratégias para garantir sua aposentadoria.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>28 Nov 2024</span>
+                            <span>13 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 22 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">JURÍDICO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Erro médico vs intercorrência: diferenças legais importantes
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Como a justiça diferencia negligência de resultados adversos inevitáveis.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>27 Nov 2024</span>
+                            <span>9 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 23 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-purple-600 text-white px-2 py-0.5 rounded text-xs font-bold">TECNOLOGIA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Prontuário eletrônico: vantagens e cuidados na implementação
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Guia para migrar do prontuário papel para o digital com segurança.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>26 Nov 2024</span>
+                            <span>10 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 24 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white px-2 py-0.5 rounded text-xs font-bold">CARREIRA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Concurso público para médico: como se preparar
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Dicas de estudo, principais bancas e como conciliar com a rotina médica.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>25 Nov 2024</span>
+                            <span>8 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 25 -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">DIREITOS</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Licença maternidade e paternidade para médicos: seus direitos
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">
+                            Duração, remuneração e estabilidade no emprego para pais e mães médicos.
+                        </p>
+                        <div class="flex items-center justify-between text-xs text-gray-400">
+                            <span>24 Nov 2024</span>
+                            <span>6 min</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Article 26-50 (simplified for brevity) -->
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-red-600 text-white px-2 py-0.5 rounded text-xs font-bold">SAÚDE</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Exercício físico para médicos: como encaixar na rotina
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Dicas práticas para manter uma rotina de atividades físicas.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>23 Nov 2024</span><span>5 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-yellow-600 text-white px-2 py-0.5 rounded text-xs font-bold">FINANCEIRO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Seguro de responsabilidade civil: vale a pena contratar?
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Análise de custos e benefícios do seguro profissional.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>22 Nov 2024</span><span>7 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">JURÍDICO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Sigilo médico: limites e exceções previstas em lei
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Quando é permitido quebrar o sigilo profissional.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>21 Nov 2024</span><span>9 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white px-2 py-0.5 rounded text-xs font-bold">CARREIRA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Especialização no exterior: oportunidades e desafios
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Como fazer fellowship ou residência fora do Brasil.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>20 Nov 2024</span><span>12 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-purple-600 text-white px-2 py-0.5 rounded text-xs font-bold">TECNOLOGIA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Wearables na medicina: monitorando pacientes à distância
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Como usar dados de smartwatches na prática clínica.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>19 Nov 2024</span><span>8 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">DIREITOS</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Médico cooperativado: direitos e particularidades
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Como funciona o regime de cooperativas médicas.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>18 Nov 2024</span><span>7 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-red-600 text-white px-2 py-0.5 rounded text-xs font-bold">SAÚDE MENTAL</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Mindfulness para médicos: técnicas de meditação
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Práticas de atenção plena para reduzir estresse.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>17 Nov 2024</span><span>6 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-yellow-600 text-white px-2 py-0.5 rounded text-xs font-bold">FINANCEIRO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Holding médica: estruturação patrimonial
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Vantagens tributárias de constituir uma holding familiar.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>16 Nov 2024</span><span>14 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">JURÍDICO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            LGPD na medicina: adequando seu consultório à lei
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Como proteger dados de pacientes conforme a legislação.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>15 Nov 2024</span><span>10 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white px-2 py-0.5 rounded text-xs font-bold">CARREIRA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Médico empreendedor: inovando na saúde
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Histórias de médicos que criaram startups de sucesso.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>14 Nov 2024</span><span>11 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">DIREITOS</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Acidente de trabalho do médico: como proceder
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Direitos e procedimentos em caso de acidente ocupacional.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>13 Nov 2024</span><span>8 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-purple-600 text-white px-2 py-0.5 rounded text-xs font-bold">TECNOLOGIA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Apps médicos: ferramentas úteis para o dia a dia
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Lista dos melhores aplicativos para profissionais de saúde.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>12 Nov 2024</span><span>7 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-red-600 text-white px-2 py-0.5 rounded text-xs font-bold">SAÚDE</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Alimentação saudável para médicos: dicas práticas
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Como manter uma dieta equilibrada com rotina intensa.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>11 Nov 2024</span><span>5 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-yellow-600 text-white px-2 py-0.5 rounded text-xs font-bold">FINANCEIRO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Investimentos para médicos iniciantes
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Como começar a investir ainda na residência.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>10 Nov 2024</span><span>9 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">JURÍDICO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Termo de consentimento: modelos e orientações
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Como elaborar documentos que protejam você e o paciente.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>09 Nov 2024</span><span>8 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white px-2 py-0.5 rounded text-xs font-bold">CARREIRA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Networking médico: construindo sua rede de contatos
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">A importância dos relacionamentos na carreira médica.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>08 Nov 2024</span><span>6 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">DIREITOS</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Rescisão de contrato médico: direitos e cálculos
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">O que receber ao sair de um emprego CLT.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>07 Nov 2024</span><span>10 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-purple-600 text-white px-2 py-0.5 rounded text-xs font-bold">TELEMEDICINA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Plataformas de telemedicina: qual escolher?
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Comparativo das principais ferramentas do mercado.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>06 Nov 2024</span><span>11 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-red-600 text-white px-2 py-0.5 rounded text-xs font-bold">SAÚDE MENTAL</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Ansiedade no médico: quando buscar ajuda
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Sinais de que o estresse passou do limite saudável.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>05 Nov 2024</span><span>7 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-yellow-600 text-white px-2 py-0.5 rounded text-xs font-bold">FINANCEIRO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Financiamento para clínica médica: opções de crédito
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Como conseguir recursos para abrir ou ampliar sua clínica.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>04 Nov 2024</span><span>9 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">SINDICAL</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Negociação coletiva: como funciona para médicos
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">O papel do sindicato nas negociações salariais.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>03 Nov 2024</span><span>8 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-blue-600 text-white px-2 py-0.5 rounded text-xs font-bold">CARREIRA</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Médico perito: uma carreira alternativa
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Como atuar como perito judicial ou do INSS.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>02 Nov 2024</span><span>10 min</span></div>
+                    </div>
+                </article>
+
+                <article class="blog-card bg-white rounded-xl overflow-hidden shadow-sm">
+                    <div class="relative h-48">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=400&q=80" alt="" class="w-full h-full object-cover">
+                        <span class="absolute top-3 left-3 bg-verde-600 text-white px-2 py-0.5 rounded text-xs font-bold">JURÍDICO</span>
+                    </div>
+                    <div class="p-5">
+                        <h3 class="font-bold text-gray-800 mb-2 line-clamp-2 hover:text-verde-600 cursor-pointer">
+                            Violência contra médicos: seus direitos
+                        </h3>
+                        <p class="text-gray-500 text-sm line-clamp-2 mb-3">Como proceder em casos de agressão física ou verbal.</p>
+                        <div class="flex items-center justify-between text-xs text-gray-400"><span>01 Nov 2024</span><span>7 min</span></div>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Pagination -->
+            <div class="flex justify-center mt-12">
+                <nav class="flex items-center gap-2">
+                    <button class="px-4 py-2 bg-verde-600 text-white rounded-lg font-semibold">1</button>
+                    <button class="px-4 py-2 bg-white text-gray-700 rounded-lg hover:bg-gray-100">2</button>
+                    <button class="px-4 py-2 bg-white text-gray-700 rounded-lg hover:bg-gray-100">3</button>
+                    <span class="px-2 text-gray-400">...</span>
+                    <button class="px-4 py-2 bg-white text-gray-700 rounded-lg hover:bg-gray-100">5</button>
+                    <button class="px-4 py-2 bg-white text-gray-700 rounded-lg hover:bg-gray-100 flex items-center gap-1">
+                        Próxima
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </section>
+    </main>
+
+    <!-- Newsletter Section -->
+    <section class="bg-verde-700 py-16">
+        <div class="max-w-3xl mx-auto px-4 text-center">
+            <h2 class="text-2xl font-bold text-white mb-4">Receba nossos artigos por e-mail</h2>
+            <p class="text-verde-100 mb-6">Inscreva-se e receba conteúdo exclusivo sobre direitos médicos, carreira e bem-estar.</p>
+            <div class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+                <input type="email" placeholder="Seu melhor e-mail" class="flex-1 px-4 py-3 rounded-lg focus:outline-none focus:ring-2 focus:ring-verde-300">
+                <button class="bg-white text-verde-700 px-6 py-3 rounded-lg font-bold hover:bg-verde-50 transition-colors">
+                    Inscrever
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <img src="./LOGO SINMEVAÇO.jpeg" alt="SINMEVAÇO" class="h-12 rounded-lg mb-4">
+                    <p class="text-gray-400 text-sm">
+                        Sindicato dos Médicos do Vale do Aço. Há mais de 30 anos defendendo a classe médica.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Links Rápidos</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="./index.html" class="hover:text-white">Início</a></li>
+                        <li><a href="./noticias.html" class="hover:text-white">Notícias</a></li>
+                        <li><a href="./blog.html" class="hover:text-white">Blog</a></li>
+                        <li><a href="./revista-dezembro-2024.html" class="hover:text-white">Revista</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Categorias do Blog</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="#" class="hover:text-white">Direitos Médicos</a></li>
+                        <li><a href="#" class="hover:text-white">Carreira</a></li>
+                        <li><a href="#" class="hover:text-white">Saúde do Médico</a></li>
+                        <li><a href="#" class="hover:text-white">Financeiro</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Contato</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li>Ipatinga, MG</li>
+                        <li>(31) 99717-8316</li>
+                        <li>contato@sinmevaco.com.br</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+                <p>© 2024 SINMEVAÇO - Sindicato dos Médicos do Vale do Aço. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
