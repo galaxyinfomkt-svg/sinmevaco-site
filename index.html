@@ -220,43 +220,40 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="relative min-h-screen flex items-center pt-28 sm:pt-32 overflow-hidden">
-        <div class="absolute inset-0">
-            <!-- Background Image - Equipe Médica Diversa -->
-            <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=2000&q=80"
-                 alt="Equipe médica diversa em hospital brasileiro"
-                 class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-br from-verde-900/90 via-verde-800/80 to-black/60"></div>
-        </div>
+    <section id="inicio" class="relative pt-28 sm:pt-32 overflow-hidden">
+        <!-- Background verde -->
+        <div class="absolute inset-0 bg-gradient-to-br from-verde-900 via-verde-800 to-verde-700"></div>
 
-        <div class="relative max-w-7xl mx-auto px-4 sm:px-6 py-20">
-            <div class="max-w-4xl">
-                <!-- Badge animado -->
-                <div class="inline-flex items-center gap-2 bg-gradient-to-r from-verde-500/20 to-verde-400/10 backdrop-blur-sm text-white px-5 py-2.5 rounded-full text-sm font-medium mb-8 border border-verde-400/30 animate-pulse">
-                    <span class="w-2 h-2 bg-verde-400 rounded-full"></span>
-                    Sindicato dos Médicos do Vale do Aço
-                </div>
+        <div class="relative max-w-7xl mx-auto px-4 sm:px-6">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[calc(100vh-8rem)]">
+                <!-- Coluna de Texto -->
+                <div class="py-10 lg:py-20 order-2 lg:order-1">
+                    <!-- Badge animado -->
+                    <div class="inline-flex items-center gap-2 bg-verde-600/30 backdrop-blur-sm text-white px-5 py-2.5 rounded-full text-sm font-medium mb-6 border border-verde-500/30">
+                        <span class="w-2 h-2 bg-verde-400 rounded-full animate-pulse"></span>
+                        Sindicato dos Médicos do Vale do Aço
+                    </div>
 
-                <!-- H1 impactante -->
-                <h1 class="text-5xl sm:text-6xl lg:text-7xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
-                    Sua carreira.<br>
-                    <span class="bg-gradient-to-r from-verde-400 via-verde-300 to-verde-400 bg-clip-text text-transparent">Nossa luta.</span>
-                </h1>
+                    <!-- H1 impactante -->
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.1] mb-6 tracking-tight">
+                        Sua carreira.<br>
+                        <span class="bg-gradient-to-r from-verde-400 via-verde-300 to-verde-400 bg-clip-text text-transparent">Nossa luta.</span>
+                    </h1>
 
-                <!-- H2 elegante -->
-                <h2 class="text-2xl sm:text-3xl font-light text-verde-200 mb-6 tracking-wide">
-                    Defendendo médicos <span class="font-semibold text-white">desde 1991</span>
-                </h2>
+                    <!-- H2 elegante -->
+                    <h2 class="text-xl sm:text-2xl lg:text-3xl font-light text-verde-200 mb-6 tracking-wide">
+                        Defendendo médicos <span class="font-semibold text-white">desde 1991</span>
+                    </h2>
 
-                <!-- Parágrafo refinado -->
-                <p class="text-lg sm:text-xl text-gray-300 mb-10 max-w-2xl leading-relaxed font-light">
-                    Proteção jurídica especializada, negociação salarial e representação política para médicos
-                    de <span class="text-white font-medium">Coronel Fabriciano</span>, Ipatinga, Timóteo, Santana do Paraíso
-                    e toda a Região Metropolitana do Vale do Aço.
-                </p>
+                    <!-- Parágrafo refinado -->
+                    <p class="text-base sm:text-lg text-verde-100 mb-8 max-w-xl leading-relaxed">
+                        Proteção jurídica especializada, negociação salarial e representação política para médicos
+                        de <span class="text-white font-medium">Coronel Fabriciano</span>, Ipatinga, Timóteo, Santana do Paraíso
+                        e toda a Região Metropolitana do Vale do Aço.
+                    </p>
 
-                <!-- Botões elegantes -->
-                <div class="flex flex-wrap gap-4 mb-14">
+                    <!-- Botões elegantes -->
+                    <div class="flex flex-wrap gap-4 mb-10">
                     <a href="https://wa.me/5531995074027?text=Olá! Quero me filiar ao SINMEVAÇO"
                        target="_blank"
                        class="group relative inline-flex items-center gap-3 bg-gradient-to-r from-verde-500 to-verde-600 hover:from-verde-400 hover:to-verde-500 text-white px-8 py-4 rounded-full font-semibold text-lg transition-all duration-300 shadow-lg shadow-verde-500/30 hover:shadow-verde-500/50 hover:-translate-y-1">
@@ -286,6 +283,32 @@
                     <div class="text-center">
                         <div class="text-4xl sm:text-5xl font-bold bg-gradient-to-r from-verde-300 to-verde-400 bg-clip-text text-transparent">28</div>
                         <div class="text-gray-400 text-sm mt-1 uppercase tracking-wider">Municípios Atendidos</div>
+                    </div>
+                </div>
+                </div>
+
+                <!-- Coluna da Imagem -->
+                <div class="order-1 lg:order-2 flex items-center justify-center">
+                    <div class="relative w-full max-w-md lg:max-w-none">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80"
+                             alt="Equipe médica diversa"
+                             class="w-full h-64 sm:h-80 lg:h-[500px] object-cover rounded-2xl shadow-2xl">
+                        <!-- Borda decorativa -->
+                        <div class="absolute -inset-2 bg-gradient-to-br from-verde-400/20 to-verde-600/20 rounded-3xl -z-10 blur-sm"></div>
+                        <!-- Badge flutuante -->
+                        <div class="absolute -bottom-4 -left-4 bg-white rounded-xl shadow-xl px-4 py-3 hidden sm:block">
+                            <div class="flex items-center gap-3">
+                                <div class="w-10 h-10 bg-verde-100 rounded-full flex items-center justify-center">
+                                    <svg class="w-5 h-5 text-verde-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <div class="font-semibold text-gray-800 text-sm">Proteção Jurídica</div>
+                                    <div class="text-verde-600 text-xs font-medium">100% Especializada</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
