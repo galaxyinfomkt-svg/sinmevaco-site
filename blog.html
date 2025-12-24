@@ -94,44 +94,90 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="bg-gradient-to-br from-verde-800 via-verde-700 to-verde-600 text-white py-16">
-        <div class="max-w-7xl mx-auto px-4 text-center">
-            <h1 class="font-serif text-4xl md:text-5xl font-bold mb-4">Blog SINMEVAÇO</h1>
-            <p class="text-verde-100 text-lg max-w-2xl mx-auto">
-                Artigos, orientações e informações essenciais para sua carreira médica.
-                Conteúdo baseado em legislação vigente e fontes oficiais.
-            </p>
+    <section class="relative bg-gradient-to-br from-verde-900 via-verde-800 to-verde-700 text-white py-20 overflow-hidden">
+        <!-- Background Pattern -->
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0" style="background-image: url('data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2240%22 fill=%22none%22 stroke=%22white%22 stroke-width=%221%22/></svg>'); background-size: 60px 60px;"></div>
         </div>
+        <div class="relative max-w-7xl mx-auto px-4">
+            <div class="text-center mb-8">
+                <span class="inline-block bg-verde-600/30 text-verde-200 px-4 py-1.5 rounded-full text-sm font-medium mb-6 border border-verde-500/30">
+                    Conhecimento para sua carreira
+                </span>
+                <h1 class="font-serif text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Blog <span class="text-verde-300">SINMEVAÇO</span>
+                </h1>
+                <p class="text-verde-100 text-lg md:text-xl max-w-3xl mx-auto leading-relaxed">
+                    Artigos, orientações jurídicas e informações essenciais para médicos do Vale do Aço.
+                    Conteúdo baseado em legislação vigente e fontes oficiais.
+                </p>
+            </div>
+
+            <!-- Category Pills -->
+            <div class="flex flex-wrap justify-center gap-3 mt-10">
+                <a href="#direitos" class="category-tag px-5 py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm font-medium border border-white/20 backdrop-blur-sm">Direitos Médicos</a>
+                <a href="#saude-mental" class="category-tag px-5 py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm font-medium border border-white/20 backdrop-blur-sm">Saúde Mental</a>
+                <a href="#telemedicina" class="category-tag px-5 py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm font-medium border border-white/20 backdrop-blur-sm">Telemedicina</a>
+                <a href="#juridico" class="category-tag px-5 py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm font-medium border border-white/20 backdrop-blur-sm">Jurídico</a>
+                <a href="#financeiro" class="category-tag px-5 py-2 bg-white/10 hover:bg-white/20 rounded-full text-sm font-medium border border-white/20 backdrop-blur-sm">Financeiro</a>
+            </div>
+        </div>
+
+        <!-- Decorative Elements -->
+        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-verde-600/20 rounded-full blur-3xl"></div>
+        <div class="absolute -top-10 -right-10 w-60 h-60 bg-verde-500/20 rounded-full blur-3xl"></div>
     </section>
 
     <!-- Main Content -->
-    <main class="max-w-7xl mx-auto px-4 py-12">
+    <main class="max-w-7xl mx-auto px-4 py-16">
 
         <!-- Featured Article -->
-        <section class="mb-16">
-            <a href="./artigos/piso-salarial-medico-lei-14434.html" class="block blog-card bg-white rounded-2xl overflow-hidden shadow-lg">
+        <section class="mb-20">
+            <div class="flex items-center gap-3 mb-8">
+                <div class="w-1.5 h-8 bg-verde-600 rounded-full"></div>
+                <h2 class="text-2xl font-bold text-gray-800">Artigo em Destaque</h2>
+            </div>
+            <a href="./artigos/piso-salarial-medico-lei-14434.html" class="group block blog-card bg-white rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl">
                 <div class="grid lg:grid-cols-2">
-                    <div class="relative h-64 lg:h-auto">
-                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?auto=format&fit=crop&w=800&q=80"
-                             alt="Piso Salarial Médico" class="w-full h-full object-cover">
-                        <span class="absolute top-4 left-4 bg-verde-600 text-white px-3 py-1 rounded-full text-sm font-bold">DESTAQUE</span>
+                    <div class="relative h-72 lg:h-[450px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?auto=format&fit=crop&w=800&q=80"
+                             alt="Equipe médica diversa" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+                        <span class="absolute top-6 left-6 bg-verde-600 text-white px-4 py-1.5 rounded-full text-sm font-bold shadow-lg">MAIS LIDO</span>
+                        <div class="absolute bottom-6 left-6 right-6">
+                            <div class="flex items-center gap-3 text-white/90 text-sm">
+                                <span class="flex items-center gap-1.5">
+                                    <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/></svg>
+                                    2.5k visualizações
+                                </span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="p-8 lg:p-12 flex flex-col justify-center">
-                        <span class="text-verde-600 text-sm font-semibold uppercase tracking-wider mb-2">Direitos Médicos</span>
-                        <h2 class="font-serif text-2xl lg:text-3xl font-bold text-gray-800 mb-4">
+                    <div class="p-8 lg:p-12 flex flex-col justify-center bg-gradient-to-br from-white to-gray-50">
+                        <span class="inline-flex items-center gap-2 text-verde-600 text-sm font-semibold uppercase tracking-wider mb-4">
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"/></svg>
+                            Direitos Médicos
+                        </span>
+                        <h2 class="font-serif text-3xl lg:text-4xl font-bold text-gray-800 mb-5 leading-tight group-hover:text-verde-700 transition-colors">
                             Lei 14.434/2022: Tudo sobre o Piso Salarial Nacional dos Médicos
                         </h2>
-                        <p class="text-gray-600 mb-6 line-clamp-3">
+                        <p class="text-gray-600 text-lg mb-8 leading-relaxed">
                             Guia completo sobre a Lei 14.434 de 4 de agosto de 2022 que institui o piso salarial nacional
-                            de R$ 17.742,78 para médicos. Entenda seus direitos, como calcular e o que fazer se não estiver recebendo.
+                            de <strong class="text-verde-700">R$ 17.742,78</strong> para médicos. Entenda seus direitos, como calcular e o que fazer.
                         </p>
-                        <div class="flex items-center gap-4 text-sm text-gray-500 mb-6">
-                            <span>Atualizado em Dez 2024</span>
-                            <span>15 min de leitura</span>
+                        <div class="flex items-center gap-6 text-sm text-gray-500 mb-8">
+                            <span class="flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+                                Dezembro 2024
+                            </span>
+                            <span class="flex items-center gap-2">
+                                <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                                15 min de leitura
+                            </span>
                         </div>
-                        <span class="inline-flex items-center gap-2 text-verde-600 font-semibold hover:text-verde-700">
+                        <span class="inline-flex items-center gap-3 bg-verde-600 text-white px-6 py-3 rounded-full font-semibold w-fit group-hover:bg-verde-700 transition-colors shadow-lg shadow-verde-600/30">
                             Ler artigo completo
-                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <svg class="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
                             </svg>
                         </span>
@@ -142,8 +188,12 @@
 
         <!-- Articles Grid -->
         <section>
-            <div class="flex items-center justify-between mb-8">
-                <h2 class="text-2xl font-bold text-gray-800">Todos os Artigos</h2>
+            <div class="flex items-center justify-between mb-10">
+                <div class="flex items-center gap-3">
+                    <div class="w-1.5 h-8 bg-verde-600 rounded-full"></div>
+                    <h2 class="text-2xl font-bold text-gray-800">Todos os Artigos</h2>
+                </div>
+                <span class="text-gray-500 text-sm">12 artigos disponíveis</span>
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
