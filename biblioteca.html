@@ -80,8 +80,16 @@
     </header>
 
     <!-- Hero Section -->
-    <section class="hero-gradient py-20">
-        <div class="max-w-7xl mx-auto px-4">
+    <section class="relative py-20 overflow-hidden">
+        <!-- Background Image -->
+        <div class="absolute inset-0">
+            <img src="https://storage.googleapis.com/msgsndr/gEs9xx0VPhQ0xvtLESaQ/media/6952e2232bb72c44ac47a899.jpeg"
+                 alt="SINMEVAÇO Biblioteca"
+                 class="w-full h-full object-cover">
+            <div class="absolute inset-0 bg-gradient-to-r from-verde-900/95 via-verde-800/90 to-verde-900/85"></div>
+        </div>
+
+        <div class="relative max-w-7xl mx-auto px-4">
             <div class="text-center max-w-4xl mx-auto">
                 <!-- Icon -->
                 <div class="inline-flex items-center justify-center w-24 h-24 bg-white/20 rounded-2xl mb-8">
@@ -299,68 +307,59 @@
 
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Publication Card 1 -->
-                <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=heart+failure+treatment+2024" target="_blank" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 block">
                     <div class="h-48 bg-gradient-to-br from-verde-600 to-verde-800 p-6 flex flex-col justify-between">
                         <span class="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold w-fit">CARDIOLOGIA</span>
                         <div>
-                            <h3 class="text-white font-bold text-lg">The New England Journal of Medicine</h3>
-                            <p class="text-verde-200 text-sm">Edição Dezembro 2024</p>
+                            <h3 class="text-white font-bold text-lg">Insuficiência Cardíaca</h3>
+                            <p class="text-verde-200 text-sm">Artigos Recentes - PubMed</p>
                         </div>
                     </div>
                     <div class="p-6">
-                        <h4 class="font-bold text-gray-800 mb-2">Avanços no Tratamento da Insuficiência Cardíaca</h4>
-                        <p class="text-gray-600 text-sm mb-4">Revisão sistemática dos novos tratamentos farmacológicos para ICC com fração de ejeção reduzida.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs text-gray-500">Publicado em 15/12/2024</span>
-                            <a href="#" class="text-verde-600 font-semibold text-sm hover:text-verde-700">Ler mais →</a>
-                        </div>
+                        <h4 class="font-bold text-gray-800 mb-2">Avanços no Tratamento da ICC</h4>
+                        <p class="text-gray-600 text-sm mb-4">Acesse artigos científicos atualizados sobre tratamentos farmacológicos para ICC.</p>
+                        <span class="text-verde-600 font-semibold text-sm">Acessar PubMed →</span>
                     </div>
-                </article>
+                </a>
 
                 <!-- Publication Card 2 -->
-                <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=alzheimer+disease+treatment+2024" target="_blank" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 block">
                     <div class="h-48 bg-gradient-to-br from-blue-600 to-blue-800 p-6 flex flex-col justify-between">
                         <span class="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold w-fit">NEUROLOGIA</span>
                         <div>
-                            <h3 class="text-white font-bold text-lg">The Lancet Neurology</h3>
-                            <p class="text-blue-200 text-sm">Edição Dezembro 2024</p>
+                            <h3 class="text-white font-bold text-lg">Doença de Alzheimer</h3>
+                            <p class="text-blue-200 text-sm">Artigos Recentes - PubMed</p>
                         </div>
                     </div>
                     <div class="p-6">
                         <h4 class="font-bold text-gray-800 mb-2">Terapias Emergentes para Alzheimer</h4>
-                        <p class="text-gray-600 text-sm mb-4">Análise dos anticorpos monoclonais anti-amiloide e seu impacto na progressão da doença.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs text-gray-500">Publicado em 10/12/2024</span>
-                            <a href="#" class="text-verde-600 font-semibold text-sm hover:text-verde-700">Ler mais →</a>
-                        </div>
+                        <p class="text-gray-600 text-sm mb-4">Pesquisas sobre anticorpos monoclonais e novos tratamentos.</p>
+                        <span class="text-verde-600 font-semibold text-sm">Acessar PubMed →</span>
                     </div>
-                </article>
+                </a>
 
                 <!-- Publication Card 3 -->
-                <article class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/?term=immunotherapy+cancer+2024" target="_blank" class="card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 block">
                     <div class="h-48 bg-gradient-to-br from-purple-600 to-purple-800 p-6 flex flex-col justify-between">
                         <span class="bg-white/20 text-white px-3 py-1 rounded-full text-xs font-bold w-fit">ONCOLOGIA</span>
                         <div>
-                            <h3 class="text-white font-bold text-lg">Journal of Clinical Oncology</h3>
-                            <p class="text-purple-200 text-sm">Edição Dezembro 2024</p>
+                            <h3 class="text-white font-bold text-lg">Imunoterapia</h3>
+                            <p class="text-purple-200 text-sm">Artigos Recentes - PubMed</p>
                         </div>
                     </div>
                     <div class="p-6">
                         <h4 class="font-bold text-gray-800 mb-2">Imunoterapia: Novos Horizontes</h4>
-                        <p class="text-gray-600 text-sm mb-4">CAR-T cells e checkpoint inhibitors: resultados de longo prazo em tumores sólidos.</p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-xs text-gray-500">Publicado em 08/12/2024</span>
-                            <a href="#" class="text-verde-600 font-semibold text-sm hover:text-verde-700">Ler mais →</a>
-                        </div>
+                        <p class="text-gray-600 text-sm mb-4">CAR-T cells e checkpoint inhibitors em tumores sólidos.</p>
+                        <span class="text-verde-600 font-semibold text-sm">Acessar PubMed →</span>
                     </div>
-                </article>
+                </a>
             </div>
 
             <div class="text-center mt-12">
-                <a href="#" class="inline-flex items-center gap-2 bg-verde-600 text-white px-8 py-4 rounded-full font-bold hover:bg-verde-700 transition-colors">
-                    Ver Todas as Publicações
+                <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" class="inline-flex items-center gap-2 bg-verde-600 text-white px-8 py-4 rounded-full font-bold hover:bg-verde-700 transition-colors">
+                    Explorar PubMed
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/>
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/>
                     </svg>
                 </a>
             </div>
@@ -377,37 +376,41 @@
             </div>
 
             <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
+                <a href="https://pubmed.ncbi.nlm.nih.gov/" target="_blank" class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors block">
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl font-bold text-white">PM</span>
                     </div>
                     <h3 class="font-bold text-white text-lg mb-2">PubMed</h3>
-                    <p class="text-verde-200 text-sm">Acesso completo à maior base de dados biomédica do mundo.</p>
-                </div>
+                    <p class="text-verde-200 text-sm mb-3">Acesso completo à maior base de dados biomédica do mundo.</p>
+                    <span class="text-verde-300 text-sm font-semibold">Acessar →</span>
+                </a>
 
-                <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
+                <a href="https://scielo.org/" target="_blank" class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors block">
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl font-bold text-white">SC</span>
                     </div>
                     <h3 class="font-bold text-white text-lg mb-2">SciELO</h3>
-                    <p class="text-verde-200 text-sm">Biblioteca científica com publicações latino-americanas.</p>
-                </div>
+                    <p class="text-verde-200 text-sm mb-3">Biblioteca científica com publicações latino-americanas.</p>
+                    <span class="text-verde-300 text-sm font-semibold">Acessar →</span>
+                </a>
 
-                <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
+                <a href="https://www.cochranelibrary.com/" target="_blank" class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors block">
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
                         <span class="text-2xl font-bold text-white">CO</span>
                     </div>
                     <h3 class="font-bold text-white text-lg mb-2">Cochrane</h3>
-                    <p class="text-verde-200 text-sm">Revisões sistemáticas de alta qualidade em saúde.</p>
-                </div>
+                    <p class="text-verde-200 text-sm mb-3">Revisões sistemáticas de alta qualidade em saúde.</p>
+                    <span class="text-verde-300 text-sm font-semibold">Acessar →</span>
+                </a>
 
-                <div class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors">
+                <a href="https://portal.cfm.org.br/" target="_blank" class="bg-white/10 backdrop-blur rounded-2xl p-6 text-center hover:bg-white/20 transition-colors block">
                     <div class="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span class="text-2xl font-bold text-white">UD</span>
+                        <span class="text-2xl font-bold text-white">CFM</span>
                     </div>
-                    <h3 class="font-bold text-white text-lg mb-2">UpToDate</h3>
-                    <p class="text-verde-200 text-sm">Informações clínicas baseadas em evidências atualizadas.</p>
-                </div>
+                    <h3 class="font-bold text-white text-lg mb-2">Portal CFM</h3>
+                    <p class="text-verde-200 text-sm mb-3">Conselho Federal de Medicina - Legislação e normas.</p>
+                    <span class="text-verde-300 text-sm font-semibold">Acessar →</span>
+                </a>
             </div>
         </div>
     </section>
