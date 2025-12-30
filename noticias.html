@@ -46,6 +46,7 @@
         }
         .card-hover {
             transition: all 0.3s ease;
+            cursor: pointer;
         }
         .card-hover:hover {
             transform: translateY(-5px);
@@ -56,6 +57,35 @@
             -webkit-line-clamp: 3;
             -webkit-box-orient: vertical;
             overflow: hidden;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 100;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .modal.active {
+            display: flex;
+        }
+        .modal-content {
+            background: white;
+            border-radius: 20px;
+            max-width: 800px;
+            max-height: 90vh;
+            overflow-y: auto;
+            position: relative;
+            animation: slideUp 0.3s ease;
+        }
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
         }
     </style>
 </head>
@@ -129,19 +159,25 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6">
 
             <!-- Notícia Destaque -->
-            <div class="bg-white rounded-3xl shadow-lg overflow-hidden mb-12 card-hover">
+            <div class="bg-white rounded-3xl shadow-lg overflow-hidden mb-12 card-hover" onclick="openModal('modal-destaque')">
                 <div class="grid lg:grid-cols-2">
                     <div class="bg-gradient-to-br from-red-500 to-red-700 p-8 lg:p-12 flex flex-col justify-center">
                         <span class="inline-block bg-white/20 text-white px-3 py-1 rounded-full text-sm font-medium mb-4 w-fit">
                             DESTAQUE
                         </span>
                         <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white mb-4 leading-tight">
-                            Resolução CFM nº 2.444/2025: Novas Medidas de Segurança para Médicos
+                            Resolução CFM n 2.444/2025: Novas Medidas de Segurança para Médicos
                         </h2>
                         <p class="text-red-100 mb-6">
-                            O Conselho Federal de Medicina publicou resolução que define medidas obrigatórias para garantir a segurança dos médicos em unidades de saúde, incluindo controle de acesso, videomonitoramento e protocolos de resposta imediata à violência.
+                            O Conselho Federal de Medicina publicou resolução que define medidas obrigatórias para garantir a segurança dos médicos em unidades de saúde.
                         </p>
-                        <span class="text-red-200 text-sm">Fonte: Portal CFM | Agosto 2025</span>
+                        <span class="text-red-200 text-sm flex items-center gap-2">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"/>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"/>
+                            </svg>
+                            Clique para ler a matéria completa
+                        </span>
                     </div>
                     <div class="p-8 lg:p-12">
                         <h3 class="text-xl font-bold text-gray-800 mb-4">Principais pontos da resolução:</h3>
@@ -150,36 +186,24 @@
                                 <svg class="w-5 h-5 text-verde-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                 </svg>
-                                <span>Unidades de saúde devem ter controle de acesso e videomonitoramento em áreas comuns</span>
+                                <span>Controle de acesso e videomonitoramento em áreas comuns</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <svg class="w-5 h-5 text-verde-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                 </svg>
-                                <span>Obrigatoriedade de notificar agressões ao CRM, polícia e Ministério Público</span>
+                                <span>Notificação obrigatória de agressões ao CRM e polícia</span>
                             </li>
                             <li class="flex items-start gap-3">
                                 <svg class="w-5 h-5 text-verde-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
                                 </svg>
-                                <span>Direito do médico vítima de agressão solicitar transferência de setor</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-verde-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span>Suporte psicológico e jurídico obrigatório ao médico agredido</span>
-                            </li>
-                            <li class="flex items-start gap-3">
-                                <svg class="w-5 h-5 text-verde-600 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"/>
-                                </svg>
-                                <span>CRMs podem determinar interdição ética de unidades que não cumprirem as normas</span>
+                                <span>Suporte psicológico e jurídico ao médico agredido</span>
                             </li>
                         </ul>
                         <div class="mt-6 p-4 bg-red-50 rounded-xl border border-red-100">
                             <p class="text-red-700 text-sm font-medium">
-                                <strong>Dado alarmante:</strong> A violência contra profissionais de saúde cresceu 68% nos últimos 10 anos. Em 2024, foram 4.562 boletins de ocorrência por agressões a médicos.
+                                <strong>Dado alarmante:</strong> A violência contra profissionais de saúde cresceu 68% nos últimos 10 anos.
                             </p>
                         </div>
                     </div>
@@ -189,8 +213,8 @@
             <!-- Grid de Notícias -->
             <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
 
-                <!-- Notícia 1 -->
-                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                <!-- Notícia 1 - Piso Salarial -->
+                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover" onclick="openModal('modal-piso')">
                     <div class="h-3 bg-gradient-to-r from-verde-500 to-verde-600"></div>
                     <div class="p-6">
                         <span class="inline-block bg-verde-100 text-verde-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
@@ -200,17 +224,23 @@
                             Comissão aprova piso salarial de R$ 10.991,19 para médicos
                         </h3>
                         <p class="text-gray-600 mb-4 line-clamp-3">
-                            A Comissão do Trabalho da Câmara dos Deputados aprovou por unanimidade o projeto que fixa o piso salarial nacional de médicos e cirurgiões-dentistas em R$ 10.991,19 para jornada de 20 horas semanais, com reajuste anual pelo INPC.
+                            A Comissão do Trabalho da Câmara dos Deputados aprovou por unanimidade o projeto que fixa o piso salarial nacional de médicos.
                         </p>
                         <div class="flex items-center justify-between">
                             <span class="text-gray-400 text-sm">Câmara dos Deputados</span>
                             <span class="text-verde-600 text-sm font-medium">Maio 2025</span>
                         </div>
+                        <div class="mt-4 text-verde-600 text-sm font-medium flex items-center gap-1">
+                            <span>Ler mais</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Notícia 2 -->
-                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                <!-- Notícia 2 - Integração Programas -->
+                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover" onclick="openModal('modal-integracao')">
                     <div class="h-3 bg-gradient-to-r from-blue-500 to-blue-600"></div>
                     <div class="p-6">
                         <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
@@ -220,17 +250,23 @@
                             Integração dos programas Mais Médicos e Médicos pelo Brasil
                         </h3>
                         <p class="text-gray-600 mb-4 line-clamp-3">
-                            A ministra da Saúde, Nísia Trindade, anunciou a integração entre os programas com objetivo de fortalecer a presença de profissionais em regiões remotas e áreas de alta vulnerabilidade social.
+                            A ministra da Saúde anunciou a integração entre os programas para fortalecer a presença de profissionais em regiões remotas.
                         </p>
                         <div class="flex items-center justify-between">
                             <span class="text-gray-400 text-sm">Ministério da Saúde</span>
                             <span class="text-blue-600 text-sm font-medium">Nov 2024</span>
                         </div>
+                        <div class="mt-4 text-blue-600 text-sm font-medium flex items-center gap-1">
+                            <span>Ler mais</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Notícia 3 -->
-                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                <!-- Notícia 3 - Mulheres -->
+                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover" onclick="openModal('modal-mulheres')">
                     <div class="h-3 bg-gradient-to-r from-purple-500 to-purple-600"></div>
                     <div class="p-6">
                         <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
@@ -240,17 +276,23 @@
                             Mulheres serão maioria entre médicos em 2025
                         </h3>
                         <p class="text-gray-600 mb-4 line-clamp-3">
-                            Pela primeira vez na história, as mulheres se tornarão maioria entre os médicos no Brasil. Em 2025, representarão 50,9% do total de profissionais, segundo dados da Demografia Médica.
+                            Pela primeira vez na história, as mulheres se tornarão maioria entre os médicos no Brasil.
                         </p>
                         <div class="flex items-center justify-between">
                             <span class="text-gray-400 text-sm">CFM / AMB</span>
                             <span class="text-purple-600 text-sm font-medium">Dez 2024</span>
                         </div>
+                        <div class="mt-4 text-purple-600 text-sm font-medium flex items-center gap-1">
+                            <span>Ler mais</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Notícia 4 -->
-                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                <!-- Notícia 4 - Mais Médicos -->
+                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover" onclick="openModal('modal-mais-medicos')">
                     <div class="h-3 bg-gradient-to-r from-amber-500 to-amber-600"></div>
                     <div class="p-6">
                         <span class="inline-block bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
@@ -260,17 +302,23 @@
                             Programa Mais Médicos registra quase 7 mil novos profissionais em 2024
                         </h3>
                         <p class="text-gray-600 mb-4 line-clamp-3">
-                            O programa registrou 6.729 novos profissionais em atividade, atuando em mais de 2 mil municípios. Esse número representa mais de 25% do total de 26.756 médicos do programa em 4.412 cidades.
+                            O programa registrou 6.729 novos profissionais em atividade, atuando em mais de 2 mil municípios.
                         </p>
                         <div class="flex items-center justify-between">
                             <span class="text-gray-400 text-sm">Agência Gov</span>
                             <span class="text-amber-600 text-sm font-medium">Dez 2024</span>
                         </div>
+                        <div class="mt-4 text-amber-600 text-sm font-medium flex items-center gap-1">
+                            <span>Ler mais</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Notícia 5 -->
-                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                <!-- Notícia 5 - Pesquisa Clínica -->
+                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover" onclick="openModal('modal-pesquisa')">
                     <div class="h-3 bg-gradient-to-r from-cyan-500 to-cyan-600"></div>
                     <div class="p-6">
                         <span class="inline-block bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
@@ -280,17 +328,23 @@
                             Sancionada lei que regula pesquisa com seres humanos no Brasil
                         </h3>
                         <p class="text-gray-600 mb-4 line-clamp-3">
-                            Foi sancionada a Lei 14.874/2024, que regula a pesquisa com seres humanos no Brasil, após sete anos de tramitação no Congresso. O país ocupa a 19ª posição no ranking mundial de pesquisa clínica.
+                            Foi sancionada a Lei 14.874/2024, que regula a pesquisa com seres humanos no Brasil, após sete anos de tramitação.
                         </p>
                         <div class="flex items-center justify-between">
                             <span class="text-gray-400 text-sm">Anvisa / Governo Federal</span>
                             <span class="text-cyan-600 text-sm font-medium">2024</span>
                         </div>
+                        <div class="mt-4 text-cyan-600 text-sm font-medium flex items-center gap-1">
+                            <span>Ler mais</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </div>
                     </div>
                 </article>
 
-                <!-- Notícia 6 -->
-                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
+                <!-- Notícia 6 - SUS Implante -->
+                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover" onclick="openModal('modal-sus')">
                     <div class="h-3 bg-gradient-to-r from-pink-500 to-pink-600"></div>
                     <div class="p-6">
                         <span class="inline-block bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
@@ -300,71 +354,17 @@
                             SUS passa a oferecer implante contraceptivo de longa duração
                         </h3>
                         <p class="text-gray-600 mb-4 line-clamp-3">
-                            O Ministério da Saúde anunciou que o SUS oferecerá o implante subdérmico contraceptivo de etonogestrel (Implanon), com duração de até 3 anos. A meta é distribuir 1,8 milhão de implantes até 2026.
+                            O Ministério da Saúde anunciou que o SUS oferecerá o implante subdérmico contraceptivo de etonogestrel.
                         </p>
                         <div class="flex items-center justify-between">
                             <span class="text-gray-400 text-sm">Ministério da Saúde</span>
                             <span class="text-pink-600 text-sm font-medium">2024</span>
                         </div>
-                    </div>
-                </article>
-
-                <!-- Notícia 7 -->
-                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
-                    <div class="h-3 bg-gradient-to-r from-orange-500 to-orange-600"></div>
-                    <div class="p-6">
-                        <span class="inline-block bg-orange-100 text-orange-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
-                            PEDIATRIA
-                        </span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 leading-tight">
-                            Novas recomendações sobre suplementação de vitamina D
-                        </h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            A Sociedade Brasileira de Pediatria atualizou as recomendações: 400 UI/dia para menores de 1 ano e 600 UI/dia para crianças e adolescentes de 1 a 18 anos de idade.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-400 text-sm">SBP</span>
-                            <span class="text-orange-600 text-sm font-medium">Nov 2024</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Notícia 8 -->
-                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
-                    <div class="h-3 bg-gradient-to-r from-gray-500 to-gray-600"></div>
-                    <div class="p-6">
-                        <span class="inline-block bg-gray-100 text-gray-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
-                            TECNOLOGIA
-                        </span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 leading-tight">
-                            Justiça suspende obrigatoriedade do Atesta CFM
-                        </h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            A Justiça Federal suspendeu os efeitos da Resolução 2.382/2024 que criou o Atesta CFM para integrar atestados médicos a sistemas digitais, apontando que a obrigatoriedade ultrapassa os limites legais do CFM.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-400 text-sm">Justiça Federal</span>
-                            <span class="text-gray-600 text-sm font-medium">2024</span>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Notícia 9 -->
-                <article class="bg-white rounded-2xl shadow-md overflow-hidden card-hover">
-                    <div class="h-3 bg-gradient-to-r from-teal-500 to-teal-600"></div>
-                    <div class="p-6">
-                        <span class="inline-block bg-teal-100 text-teal-700 px-3 py-1 rounded-full text-xs font-semibold mb-3">
-                            ESTATÍSTICAS
-                        </span>
-                        <h3 class="text-xl font-bold text-gray-800 mb-3 leading-tight">
-                            Brasil tem 353 mil médicos especialistas
-                        </h3>
-                        <p class="text-gray-600 mb-4 line-clamp-3">
-                            Em dezembro de 2024, o Brasil contava com 353.287 médicos especialistas (59,1% do total). A distribuição é desigual: varia de 72,2% no DF a 45,1% no Piauí. O Sudeste concentra 55,4% dos especialistas.
-                        </p>
-                        <div class="flex items-center justify-between">
-                            <span class="text-gray-400 text-sm">CFM / Demografia Médica</span>
-                            <span class="text-teal-600 text-sm font-medium">Dez 2024</span>
+                        <div class="mt-4 text-pink-600 text-sm font-medium flex items-center gap-1">
+                            <span>Ler mais</span>
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
                         </div>
                     </div>
                 </article>
@@ -382,10 +382,9 @@
                     <div>
                         <h3 class="text-lg font-bold text-verde-800 mb-2">Sobre nossas fontes</h3>
                         <p class="text-verde-700">
-                            Todas as notícias apresentadas nesta página são baseadas em informações oficiais de fontes confiáveis como:
+                            Todas as notícias são baseadas em informações oficiais:
                             <strong>Conselho Federal de Medicina (CFM)</strong>, <strong>Ministério da Saúde</strong>,
-                            <strong>Câmara dos Deputados</strong>, <strong>Agência Gov</strong>, <strong>Anvisa</strong>,
-                            <strong>Associação Paulista de Medicina (APM)</strong> e <strong>Sociedade Brasileira de Pediatria (SBP)</strong>.
+                            <strong>Câmara dos Deputados</strong>, <strong>Agência Gov</strong> e <strong>Anvisa</strong>.
                         </p>
                     </div>
                 </div>
@@ -402,7 +401,6 @@
             </h2>
             <p class="text-verde-200 text-lg mb-8 max-w-2xl mx-auto">
                 Conte com assessoria jurídica especializada, negociação salarial e proteção profissional.
-                Faça parte do sindicato que defende os médicos do Vale do Aço desde 1991.
             </p>
             <a href="https://wa.me/5531995074027?text=Olá! Quero me filiar ao SINMEVAÇO" target="_blank"
                class="inline-flex items-center gap-3 bg-white text-verde-700 hover:bg-verde-50 px-8 py-4 rounded-full font-bold text-lg transition-all shadow-lg hover:shadow-xl">
@@ -458,6 +456,264 @@
             </div>
         </div>
     </footer>
+
+    <!-- MODAIS COM CONTEÚDO COMPLETO -->
+
+    <!-- Modal Destaque - Violência -->
+    <div id="modal-destaque" class="modal" onclick="closeModal('modal-destaque')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-destaque')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="h-4 bg-gradient-to-r from-red-500 to-red-700"></div>
+            <div class="p-8">
+                <span class="inline-block bg-red-100 text-red-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">SEGURANÇA MÉDICA</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Resolução CFM n 2.444/2025: Novas Medidas de Segurança para Médicos</h2>
+                <p class="text-gray-500 text-sm mb-6">Fonte: Conselho Federal de Medicina | Agosto 2025</p>
+
+                <div class="prose max-w-none text-gray-600 space-y-4">
+                    <p>O Conselho Federal de Medicina (CFM) publicou a Resolução n 2.444/2025, que estabelece medidas obrigatórias para garantir a segurança dos médicos em unidades de saúde públicas e privadas em todo o Brasil.</p>
+
+                    <p>A resolução surge em resposta ao alarmante crescimento de 68% nos casos de violência contra profissionais de saúde nos últimos 10 anos. Em 2024, foram registrados 4.562 boletins de ocorrência por agressões a médicos.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Principais determinações:</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Controle de acesso:</strong> Unidades de saúde devem implementar sistemas de controle de acesso e videomonitoramento em áreas comuns</li>
+                        <li><strong>Notificação obrigatória:</strong> Todas as agressões devem ser notificadas ao CRM, polícia e Ministério Público</li>
+                        <li><strong>Direito de transferência:</strong> O médico vítima de agressão pode solicitar transferência de setor</li>
+                        <li><strong>Suporte ao profissional:</strong> Obrigatoriedade de oferecer suporte psicológico e jurídico ao médico agredido</li>
+                        <li><strong>Interdição ética:</strong> Os CRMs podem determinar interdição ética de unidades que não cumprirem as normas de segurança</li>
+                    </ul>
+
+                    <div class="bg-red-50 border border-red-200 rounded-xl p-4 mt-6">
+                        <p class="text-red-700 font-medium">O SINMEVAÇO apoia integralmente esta resolução e está à disposição dos médicos do Vale do Aço para orientação jurídica em casos de violência no ambiente de trabalho.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Piso Salarial -->
+    <div id="modal-piso" class="modal" onclick="closeModal('modal-piso')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-piso')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="h-4 bg-gradient-to-r from-verde-500 to-verde-600"></div>
+            <div class="p-8">
+                <span class="inline-block bg-verde-100 text-verde-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">PISO SALARIAL</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Comissão aprova piso salarial de R$ 10.991,19 para médicos</h2>
+                <p class="text-gray-500 text-sm mb-6">Fonte: Câmara dos Deputados | Maio 2025</p>
+
+                <div class="prose max-w-none text-gray-600 space-y-4">
+                    <p>A Comissão do Trabalho da Câmara dos Deputados aprovou por unanimidade o Projeto de Lei 765/2023, que fixa o piso salarial nacional para médicos e cirurgiões-dentistas em R$ 10.991,19 para jornada de 20 horas semanais.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Detalhes do projeto:</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Valor base:</strong> R$ 10.991,19 para 20 horas semanais</li>
+                        <li><strong>Proporcionalidade:</strong> Valores proporcionais para outras cargas horárias</li>
+                        <li><strong>Reajuste anual:</strong> Correção pelo INPC (Índice Nacional de Preços ao Consumidor)</li>
+                        <li><strong>Abrangência:</strong> Setor público e privado em todo o território nacional</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Próximos passos:</h3>
+                    <p>O projeto segue agora para votação no Plenário da Câmara dos Deputados. Se aprovado, será encaminhado ao Senado Federal e, posteriormente, à sanção presidencial.</p>
+
+                    <div class="bg-verde-50 border border-verde-200 rounded-xl p-4 mt-6">
+                        <p class="text-verde-700 font-medium">Esta é uma conquista histórica para a categoria médica brasileira. O SINMEVAÇO acompanha de perto a tramitação e mantém os filiados informados sobre cada avanço.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Integração Programas -->
+    <div id="modal-integracao" class="modal" onclick="closeModal('modal-integracao')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-integracao')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="h-4 bg-gradient-to-r from-blue-500 to-blue-600"></div>
+            <div class="p-8">
+                <span class="inline-block bg-blue-100 text-blue-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">PROGRAMAS</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Integração dos programas Mais Médicos e Médicos pelo Brasil</h2>
+                <p class="text-gray-500 text-sm mb-6">Fonte: Ministério da Saúde | Novembro 2024</p>
+
+                <div class="prose max-w-none text-gray-600 space-y-4">
+                    <p>A ministra da Saúde, Nísia Trindade, anunciou a integração entre os programas Mais Médicos e Médicos pelo Brasil, com o objetivo de fortalecer a presença de profissionais médicos em regiões remotas e áreas de alta vulnerabilidade social.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Objetivos da integração:</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Ampliar a cobertura de atenção primária em municípios carentes</li>
+                        <li>Reduzir a desigualdade na distribuição de médicos no país</li>
+                        <li>Oferecer melhores condições de trabalho e remuneração</li>
+                        <li>Fortalecer a formação médica em áreas prioritárias</li>
+                    </ul>
+
+                    <p>A medida visa otimizar recursos e garantir que as regiões mais necessitadas do Brasil tenham acesso adequado a profissionais de saúde qualificados.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Mulheres -->
+    <div id="modal-mulheres" class="modal" onclick="closeModal('modal-mulheres')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-mulheres')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="h-4 bg-gradient-to-r from-purple-500 to-purple-600"></div>
+            <div class="p-8">
+                <span class="inline-block bg-purple-100 text-purple-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">DEMOGRAFIA MÉDICA</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Mulheres serão maioria entre médicos em 2025</h2>
+                <p class="text-gray-500 text-sm mb-6">Fonte: CFM / AMB - Demografia Médica 2024 | Dezembro 2024</p>
+
+                <div class="prose max-w-none text-gray-600 space-y-4">
+                    <p>Pela primeira vez na história da medicina brasileira, as mulheres se tornarão maioria entre os médicos do país. Segundo dados da pesquisa Demografia Médica 2024, realizada pelo CFM em parceria com a AMB, em 2025 as mulheres representarão 50,9% do total de profissionais.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Dados relevantes:</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>50,9%</strong> dos médicos serão mulheres em 2025</li>
+                        <li>Entre médicos com até 29 anos, mulheres já são <strong>63,4%</strong></li>
+                        <li>A tendência de feminização se mantém nas novas gerações</li>
+                        <li>Especialidades como Pediatria e Dermatologia têm maioria feminina</li>
+                    </ul>
+
+                    <p>Este marco histórico reflete as mudanças sociais e o crescente acesso das mulheres à educação superior e às carreiras de prestígio.</p>
+
+                    <div class="bg-purple-50 border border-purple-200 rounded-xl p-4 mt-6">
+                        <p class="text-purple-700 font-medium">O SINMEVAÇO celebra esta conquista e reafirma seu compromisso com a equidade de gênero e a defesa dos direitos de todas as médicas e médicos do Vale do Aço.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Mais Médicos -->
+    <div id="modal-mais-medicos" class="modal" onclick="closeModal('modal-mais-medicos')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-mais-medicos')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="h-4 bg-gradient-to-r from-amber-500 to-amber-600"></div>
+            <div class="p-8">
+                <span class="inline-block bg-amber-100 text-amber-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">MAIS MÉDICOS</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Programa Mais Médicos registra quase 7 mil novos profissionais em 2024</h2>
+                <p class="text-gray-500 text-sm mb-6">Fonte: Agência Gov | Dezembro 2024</p>
+
+                <div class="prose max-w-none text-gray-600 space-y-4">
+                    <p>O Programa Mais Médicos registrou a entrada de 6.729 novos profissionais em 2024, que passaram a atuar em mais de 2 mil municípios brasileiros. Este número representa mais de 25% do total de 26.756 médicos atualmente vinculados ao programa.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Números do programa:</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>6.729</strong> novos médicos em 2024</li>
+                        <li><strong>26.756</strong> médicos no total do programa</li>
+                        <li><strong>4.412</strong> municípios atendidos</li>
+                        <li><strong>2.000+</strong> municípios com novos profissionais</li>
+                    </ul>
+
+                    <p>O programa continua sendo fundamental para garantir atendimento médico em regiões com escassez de profissionais, especialmente no interior do país e em áreas de difícil acesso.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal Pesquisa -->
+    <div id="modal-pesquisa" class="modal" onclick="closeModal('modal-pesquisa')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-pesquisa')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="h-4 bg-gradient-to-r from-cyan-500 to-cyan-600"></div>
+            <div class="p-8">
+                <span class="inline-block bg-cyan-100 text-cyan-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">PESQUISA CLÍNICA</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">Sancionada lei que regula pesquisa com seres humanos no Brasil</h2>
+                <p class="text-gray-500 text-sm mb-6">Fonte: Anvisa / Governo Federal | 2024</p>
+
+                <div class="prose max-w-none text-gray-600 space-y-4">
+                    <p>Foi sancionada a Lei 14.874/2024, que estabelece o marco regulatório para pesquisas clínicas com seres humanos no Brasil. A lei foi aprovada após sete anos de tramitação no Congresso Nacional.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Principais pontos da lei:</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li>Define regras claras para condução de pesquisas clínicas</li>
+                        <li>Estabelece proteções aos participantes de estudos</li>
+                        <li>Cria mecanismos de fiscalização e controle</li>
+                        <li>Simplifica processos burocráticos mantendo a segurança</li>
+                    </ul>
+
+                    <p>Atualmente, o Brasil ocupa a 19 posicao no ranking mundial de pesquisa clínica. A nova legislação deve impulsionar o setor e atrair mais investimentos para estudos no país.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal SUS -->
+    <div id="modal-sus" class="modal" onclick="closeModal('modal-sus')">
+        <div class="modal-content" onclick="event.stopPropagation()">
+            <button onclick="closeModal('modal-sus')" class="absolute top-4 right-4 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors">
+                <svg class="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+            <div class="h-4 bg-gradient-to-r from-pink-500 to-pink-600"></div>
+            <div class="p-8">
+                <span class="inline-block bg-pink-100 text-pink-700 px-3 py-1 rounded-full text-xs font-semibold mb-4">SAÚDE PÚBLICA</span>
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-800 mb-4">SUS passa a oferecer implante contraceptivo de longa duração</h2>
+                <p class="text-gray-500 text-sm mb-6">Fonte: Ministério da Saúde | 2024</p>
+
+                <div class="prose max-w-none text-gray-600 space-y-4">
+                    <p>O Ministério da Saúde anunciou que o Sistema Único de Saúde (SUS) passará a oferecer o implante subdérmico contraceptivo de etonogestrel, conhecido comercialmente como Implanon.</p>
+
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Características do implante:</h3>
+                    <ul class="list-disc pl-6 space-y-2">
+                        <li><strong>Duração:</strong> Até 3 anos de proteção contraceptiva</li>
+                        <li><strong>Eficácia:</strong> Superior a 99%</li>
+                        <li><strong>Aplicação:</strong> Subdérmica, no braço</li>
+                        <li><strong>Reversibilidade:</strong> Fertilidade retorna após remoção</li>
+                    </ul>
+
+                    <h3 class="text-xl font-bold text-gray-800 mt-6 mb-3">Meta do programa:</h3>
+                    <p>O governo federal pretende distribuir 1,8 milhão de implantes até 2026, priorizando mulheres em situação de vulnerabilidade social e adolescentes.</p>
+
+                    <p>A medida amplia as opções de planejamento familiar disponíveis gratuitamente pelo SUS e representa um avanço importante na saúde reprodutiva das brasileiras.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Fechar modal com ESC
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.modal.active').forEach(modal => {
+                    modal.classList.remove('active');
+                });
+                document.body.style.overflow = 'auto';
+            }
+        });
+    </script>
 
 </body>
 </html>
