@@ -1,0 +1,52 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGreen2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14532d"/>
+      <stop offset="50%" style="stop-color:#166534"/>
+      <stop offset="100%" style="stop-color:#15803d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bgGreen2)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="0" cy="200" r="300" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="1000" cy="900" r="250" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- Header -->
+  <text x="60" y="100" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#86efac">O MELHOR DE TUDO</text>
+
+  <!-- Badge "SEM LIMITE" -->
+  <rect x="300" y="160" width="480" height="90" rx="45" fill="#ef4444" transform="rotate(3, 540, 205)"/>
+  <text x="540" y="220" font-family="Arial, sans-serif" font-size="48" font-weight="900" fill="white" text-anchor="middle">SEM LIMITE!</text>
+
+  <!-- Main text -->
+  <text x="540" y="380" font-family="Arial, sans-serif" font-size="72" font-weight="900" fill="white" text-anchor="middle">Quanto mais</text>
+  <text x="540" y="470" font-family="Arial, sans-serif" font-size="72" font-weight="900" fill="white" text-anchor="middle">você indicar,</text>
+  <text x="540" y="560" font-family="Arial, sans-serif" font-size="72" font-weight="900" fill="#fbbf24" text-anchor="middle">mais economiza!</text>
+
+  <!-- Examples box -->
+  <rect x="140" y="620" width="800" height="320" rx="30" fill="rgba(255,255,255,0.12)"/>
+
+  <!-- Example 1 -->
+  <text x="200" y="700" font-family="Arial, sans-serif" font-size="36" fill="white">3 indicações</text>
+  <text x="880" y="700" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#fbbf24" text-anchor="end">= 3 meses grátis</text>
+
+  <!-- Divider -->
+  <line x1="180" y1="740" x2="900" y2="740" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+
+  <!-- Example 2 -->
+  <text x="200" y="810" font-family="Arial, sans-serif" font-size="36" fill="white">5 indicações</text>
+  <text x="880" y="810" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#fbbf24" text-anchor="end">= 5 meses grátis</text>
+
+  <!-- Divider -->
+  <line x1="180" y1="850" x2="900" y2="850" stroke="rgba(255,255,255,0.2)" stroke-width="2"/>
+
+  <!-- Example 3 -->
+  <text x="200" y="920" font-family="Arial, sans-serif" font-size="36" fill="white">10 indicações</text>
+  <text x="880" y="920" font-family="Arial, sans-serif" font-size="36" font-weight="bold" fill="#fbbf24" text-anchor="end">= 10 meses grátis</text>
+
+  <!-- Footer -->
+  <text x="540" y="1020" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.5)" text-anchor="middle">@sinmevaco</text>
+</svg>

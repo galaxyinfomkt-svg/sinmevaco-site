@@ -1,0 +1,59 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGreen" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14532d"/>
+      <stop offset="50%" style="stop-color:#166534"/>
+      <stop offset="100%" style="stop-color:#15803d"/>
+    </linearGradient>
+    <linearGradient id="amber" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f59e0b"/>
+      <stop offset="100%" style="stop-color:#fbbf24"/>
+    </linearGradient>
+    <!-- Import Quicksand font -->
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap');
+    </style>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bgGreen)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="980" cy="100" r="200" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="100" cy="980" r="150" fill="rgba(255,255,255,0.08)"/>
+  <circle cx="900" cy="900" r="300" fill="rgba(255,255,255,0.05)"/>
+
+  <!-- Logo with dotted circle border -->
+  <g transform="translate(540, 180)">
+    <!-- Outer dotted circle -->
+    <circle cx="0" cy="0" r="95" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="3" stroke-dasharray="8,6"/>
+    <!-- Inner solid circle background -->
+    <circle cx="0" cy="0" r="80" fill="rgba(255,255,255,0.15)"/>
+    <!-- Logo image -->
+    <image x="-60" y="-50" width="120" height="70" href="https://storage.googleapis.com/msgsndr/gEs9xx0VPhQ0xvtLESaQ/media/6952f3316c45656f20ae2950.png"/>
+    <!-- SINMEVAÇO text below logo -->
+    <text x="0" y="45" font-family="Quicksand, Arial, sans-serif" font-size="18" font-weight="600" fill="white" text-anchor="middle">SINMEVAÇO</text>
+  </g>
+
+  <!-- Badge "PROGRAMA EXCLUSIVO" -->
+  <rect x="315" y="320" width="450" height="60" rx="30" fill="#f59e0b"/>
+  <text x="540" y="360" font-family="Quicksand, Arial, sans-serif" font-size="24" font-weight="700" fill="white" text-anchor="middle">PROGRAMA EXCLUSIVO</text>
+
+  <!-- Main Title -->
+  <text x="540" y="480" font-family="Quicksand, Arial, sans-serif" font-size="110" font-weight="700" fill="white" text-anchor="middle">INDIQUE</text>
+  <text x="540" y="590" font-family="Quicksand, Arial, sans-serif" font-size="110" font-weight="700" fill="white" text-anchor="middle">&amp; GANHE</text>
+
+  <!-- Value box -->
+  <rect x="190" y="640" width="700" height="140" rx="30" fill="rgba(255,255,255,0.15)"/>
+  <text x="540" y="705" font-family="Quicksand, Arial, sans-serif" font-size="48" font-weight="700" fill="#fbbf24" text-anchor="middle">R$ 150 DE ECONOMIA</text>
+  <text x="540" y="755" font-family="Quicksand, Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.8)" text-anchor="middle">para você e seu colega</text>
+
+  <!-- CTA -->
+  <text x="540" y="880" font-family="Quicksand, Arial, sans-serif" font-size="28" fill="rgba(255,255,255,0.7)" text-anchor="middle">Deslize para saber como funciona</text>
+
+  <!-- Arrow -->
+  <path d="M720 875 L770 875 M755 860 L770 875 L755 890" stroke="rgba(255,255,255,0.7)" stroke-width="3" fill="none" stroke-linecap="round"/>
+
+  <!-- Footer -->
+  <text x="540" y="1020" font-family="Quicksand, Arial, sans-serif" font-size="22" fill="rgba(255,255,255,0.5)" text-anchor="middle">@sinmevaco</text>
+</svg>

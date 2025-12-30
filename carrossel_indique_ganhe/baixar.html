@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baixar Carrossel - SINMEVAÇO</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        h1 {
+            text-align: center;
+            color: white;
+            margin-bottom: 10px;
+            font-size: 2rem;
+        }
+        .subtitle {
+            text-align: center;
+            color: #86efac;
+            margin-bottom: 40px;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+        }
+        .card {
+            background: white;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        .card img, .card object {
+            width: 100%;
+            height: 320px;
+            object-fit: contain;
+            background: #f3f4f6;
+        }
+        .card-content {
+            padding: 20px;
+        }
+        .card h3 {
+            color: #1f2937;
+            margin-bottom: 5px;
+        }
+        .card p {
+            color: #6b7280;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        .buttons {
+            display: flex;
+            gap: 10px;
+        }
+        .btn {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            cursor: pointer;
+            text-decoration: none;
+            text-align: center;
+            transition: all 0.3s;
+        }
+        .btn-svg {
+            background: #16a34a;
+            color: white;
+        }
+        .btn-svg:hover {
+            background: #15803d;
+        }
+        .btn-png {
+            background: #f59e0b;
+            color: white;
+        }
+        .btn-png:hover {
+            background: #d97706;
+        }
+        .instructions {
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 40px;
+            color: white;
+        }
+        .instructions h2 {
+            margin-bottom: 15px;
+            color: #fbbf24;
+        }
+        .instructions ol {
+            margin-left: 20px;
+        }
+        .instructions li {
+            margin-bottom: 10px;
+            color: #dcfce7;
+        }
+        .download-all {
+            display: block;
+            width: fit-content;
+            margin: 30px auto;
+            padding: 15px 40px;
+            background: #fbbf24;
+            color: #1f2937;
+            border-radius: 30px;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        .download-all:hover {
+            background: #f59e0b;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Carrossel Indique & Ganhe</h1>
+        <p class="subtitle">Clique para baixar cada slide em SVG</p>
+
+        <div class="grid">
+            <div class="card">
+                <object data="slide1_capa.svg" type="image/svg+xml"></object>
+                <div class="card-content">
+                    <h3>Slide 1 - Capa</h3>
+                    <p>Apresentação do programa Indique & Ganhe</p>
+                    <div class="buttons">
+                        <a href="slide1_capa.svg" download="slide1_capa.svg" class="btn btn-svg">Baixar SVG</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <object data="slide2_como_funciona.svg" type="image/svg+xml"></object>
+                <div class="card-content">
+                    <h3>Slide 2 - Como Funciona</h3>
+                    <p>Passo a passo do programa</p>
+                    <div class="buttons">
+                        <a href="slide2_como_funciona.svg" download="slide2_como_funciona.svg" class="btn btn-svg">Baixar SVG</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <object data="slide3_premio.svg" type="image/svg+xml"></object>
+                <div class="card-content">
+                    <h3>Slide 3 - O Prêmio</h3>
+                    <p>Economia de R$300 por indicação</p>
+                    <div class="buttons">
+                        <a href="slide3_premio.svg" download="slide3_premio.svg" class="btn btn-svg">Baixar SVG</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <object data="slide4_sem_limite.svg" type="image/svg+xml"></object>
+                <div class="card-content">
+                    <h3>Slide 4 - Sem Limite</h3>
+                    <p>Quanto mais indicar, mais economiza</p>
+                    <div class="buttons">
+                        <a href="slide4_sem_limite.svg" download="slide4_sem_limite.svg" class="btn btn-svg">Baixar SVG</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <object data="slide5_beneficios.svg" type="image/svg+xml"></object>
+                <div class="card-content">
+                    <h3>Slide 5 - Benefícios</h3>
+                    <p>Vantagens de ser filiado</p>
+                    <div class="buttons">
+                        <a href="slide5_beneficios.svg" download="slide5_beneficios.svg" class="btn btn-svg">Baixar SVG</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <object data="slide6_cta.svg" type="image/svg+xml"></object>
+                <div class="card-content">
+                    <h3>Slide 6 - CTA</h3>
+                    <p>Chamada para ação com WhatsApp</p>
+                    <div class="buttons">
+                        <a href="slide6_cta.svg" download="slide6_cta.svg" class="btn btn-svg">Baixar SVG</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="instructions">
+            <h2>Como converter para PNG (para Instagram)</h2>
+            <ol>
+                <li><strong>Opção 1 - Canva:</strong> Acesse canva.com, crie um design 1080x1080, importe o SVG e exporte como PNG</li>
+                <li><strong>Opção 2 - Navegador:</strong> Abra o SVG no navegador, clique com botão direito > "Salvar imagem como" (alguns navegadores salvam como PNG)</li>
+                <li><strong>Opção 3 - Online:</strong> Use sites como svgtopng.com ou cloudconvert.com</li>
+                <li><strong>Opção 4 - Photoshop/Illustrator:</strong> Abra o SVG e exporte como PNG em 1080x1080px</li>
+            </ol>
+        </div>
+    </div>
+</body>
+</html>

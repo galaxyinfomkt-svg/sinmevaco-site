@@ -1,0 +1,37 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bgGreen3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#14532d"/>
+      <stop offset="50%" style="stop-color:#166534"/>
+      <stop offset="100%" style="stop-color:#15803d"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="url(#bgGreen3)"/>
+
+  <!-- Decorative circles -->
+  <circle cx="1100" cy="1000" r="350" fill="rgba(255,255,255,0.06)"/>
+  <circle cx="-50" cy="300" r="200" fill="rgba(255,255,255,0.06)"/>
+
+  <!-- Logo -->
+  <image x="60" y="50" width="200" height="80" href="https://storage.googleapis.com/msgsndr/gEs9xx0VPhQ0xvtLESaQ/media/6952f3316c45656f20ae2950.png"/>
+
+  <!-- Main Title -->
+  <text x="540" y="320" font-family="Arial, sans-serif" font-size="72" font-weight="900" fill="white" text-anchor="middle">Faça parte do</text>
+  <text x="540" y="420" font-family="Arial, sans-serif" font-size="80" font-weight="900" fill="#fbbf24" text-anchor="middle">SINMEVAÇO!</text>
+
+  <!-- Subtitle -->
+  <text x="540" y="510" font-family="Arial, sans-serif" font-size="32" fill="#bbf7d0" text-anchor="middle">Desde 1991 defendendo os direitos</text>
+  <text x="540" y="555" font-family="Arial, sans-serif" font-size="32" fill="#bbf7d0" text-anchor="middle">dos médicos do Vale do Aço</text>
+
+  <!-- WhatsApp box -->
+  <rect x="190" y="650" width="700" height="180" rx="30" fill="#22c55e"/>
+  <text x="540" y="720" font-family="Arial, sans-serif" font-size="28" fill="#dcfce7" text-anchor="middle">Fale conosco pelo WhatsApp</text>
+  <text x="540" y="785" font-family="Arial, sans-serif" font-size="52" font-weight="bold" fill="white" text-anchor="middle">(31) 99507-4027</text>
+
+  <!-- Footer -->
+  <text x="400" y="1000" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.6)" text-anchor="middle">@sinmevaco</text>
+  <text x="540" y="1000" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.4)" text-anchor="middle">|</text>
+  <text x="700" y="1000" font-family="Arial, sans-serif" font-size="24" fill="rgba(255,255,255,0.6)" text-anchor="middle">Coronel Fabriciano, MG</text>
+</svg>
