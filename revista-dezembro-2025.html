@@ -145,13 +145,199 @@
 
         /* Cover Page */
         .cover-page {
-            background: linear-gradient(135deg, #14532d 0%, #166534 50%, #15803d 100%);
+            background: linear-gradient(135deg, #0c3d1f 0%, #14532d 30%, #166534 60%, #1a7a42 100%);
             color: white;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cover-page::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle at 30% 20%, rgba(255,255,255,0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 80%, rgba(255,255,255,0.05) 0%, transparent 40%);
+            pointer-events: none;
+        }
+
+        .cover-page::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #fbbf24, #f59e0b, #fbbf24);
+        }
+
+        .cover-logo {
+            width: 100px;
+            height: 100px;
+            background: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 2rem;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-logo img {
+            width: 80px;
+            height: 80px;
+            object-fit: contain;
+        }
+
+        .cover-badge {
+            background: linear-gradient(135deg, #fbbf24, #f59e0b);
+            color: #14532d;
+            padding: 0.5rem 1.5rem;
+            border-radius: 50px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 4px 15px rgba(251, 191, 36, 0.4);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1.1;
+            margin-bottom: 0.5rem;
+            text-shadow: 0 4px 20px rgba(0,0,0,0.3);
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: #bbf7d0;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-edition {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 0.75rem 2rem;
+            border-radius: 50px;
+            border: 1px solid rgba(255,255,255,0.2);
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-edition-month {
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+
+        .cover-edition-divider {
+            width: 1px;
+            height: 20px;
+            background: rgba(255,255,255,0.3);
+        }
+
+        .cover-edition-number {
+            font-size: 0.875rem;
+            color: #bbf7d0;
+        }
+
+        .cover-description {
+            max-width: 400px;
+            color: #dcfce7;
+            font-size: 1rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-cta {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cover-cta-icon {
+            width: 50px;
+            height: 50px;
+            background: rgba(255,255,255,0.15);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: pulse-ring 2s ease-out infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% { box-shadow: 0 0 0 0 rgba(255,255,255,0.4); }
+            70% { box-shadow: 0 0 0 20px rgba(255,255,255,0); }
+            100% { box-shadow: 0 0 0 0 rgba(255,255,255,0); }
+        }
+
+        .cover-cta-text {
+            font-size: 0.875rem;
+            color: rgba(255,255,255,0.7);
+        }
+
+        .cover-footer {
+            position: absolute;
+            bottom: 20px;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            font-size: 0.75rem;
+            color: rgba(255,255,255,0.5);
+        }
+
+        .cover-footer span {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        @media (max-width: 640px) {
+            .cover-title {
+                font-size: 2.5rem;
+            }
+            .cover-subtitle {
+                font-size: 1.25rem;
+            }
+            .cover-logo {
+                width: 80px;
+                height: 80px;
+            }
+            .cover-logo img {
+                width: 60px;
+                height: 60px;
+            }
         }
 
         /* Article styling */
@@ -259,26 +445,59 @@
             <!-- Página 1 - Capa -->
             <div class="page active" data-page="1">
                 <div class="page-content cover-page">
-                    <div class="bg-white/20 px-4 py-2 rounded-full text-sm font-medium mb-8">
-                        Edição Digital
+                    <!-- Logo -->
+                    <div class="cover-logo">
+                        <img src="https://storage.googleapis.com/msgsndr/gEs9xx0VPhQ0xvtLESaQ/media/6952f30dee104761973a8618.png" alt="SINMEVAÇO">
                     </div>
-                    <h1 class="font-serif text-4xl sm:text-6xl font-bold mb-4">
-                        Revista SINMEVAÇO
+
+                    <!-- Badge -->
+                    <div class="cover-badge">
+                        Edição Digital Exclusiva
+                    </div>
+
+                    <!-- Título -->
+                    <h1 class="cover-title">
+                        Revista<br>SINMEVAÇO
                     </h1>
-                    <div class="flex items-center gap-4 text-verde-200 mb-8">
-                        <span class="text-lg">Dezembro 2025</span>
-                        <span>|</span>
-                        <span>Edição Nº 1</span>
-                    </div>
-                    <p class="text-verde-100 text-lg max-w-md">
-                        Informativo digital do Sindicato dos Médicos do Vale do Aço
+
+                    <!-- Subtítulo -->
+                    <p class="cover-subtitle">
+                        Sindicato dos Médicos do Vale do Aço
                     </p>
-                    <div class="mt-12 animate-bounce">
-                        <svg class="w-8 h-8 text-white/60" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
-                        </svg>
+
+                    <!-- Edição -->
+                    <div class="cover-edition">
+                        <span class="cover-edition-month">Dezembro 2025</span>
+                        <span class="cover-edition-divider"></span>
+                        <span class="cover-edition-number">Edição Nº 1</span>
                     </div>
-                    <p class="text-white/60 text-sm mt-2">Clique para folhear</p>
+
+                    <!-- Descrição -->
+                    <p class="cover-description">
+                        Piso Salarial • Segurança Médica • Demografia • Mais Médicos
+                    </p>
+
+                    <!-- CTA -->
+                    <div class="cover-cta">
+                        <div class="cover-cta-icon">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </div>
+                        <span class="cover-cta-text">Clique para folhear</span>
+                    </div>
+
+                    <!-- Footer -->
+                    <div class="cover-footer">
+                        <span>
+                            <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24">
+                                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069z"/>
+                            </svg>
+                            @sinmevaco
+                        </span>
+                        <span>|</span>
+                        <span>Coronel Fabriciano, MG</span>
+                    </div>
                 </div>
             </div>
 
