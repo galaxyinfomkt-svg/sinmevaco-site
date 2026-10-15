@@ -1,0 +1,6 @@
+{
+  "routes": [
+    { "src": "/manutencao-logo.jpeg", "dest": "/manutencao-logo.jpeg" },
+    { "src": "/(.*)", "dest": "/manutencao.html", "status": 503, "headers": { "Retry-After": "86400", "Cache-Control": "no-store" } }
+  ]
+}
